@@ -1,9 +1,37 @@
-.body {background-color:(rgb(33 36 41);));
-}
-.nav {
-
+body{
+    background-color:#212429;
 }
 
-p {
-    color: w;
+p{
+    color: aliceblue;
+}
+
+nav a{
+    color: #ddd;
+    display: block;
+    text-decoration: none;
+    padding: 0 2.5em;
+    transition: .4s;
+}
+
+nav a:hover{
+    background: rgba(0, 0, 0, .5);
+}
+
+nav li{
+    line-height: 3rem;
+}
+
+nav ul{
+    list-style: none;
+    padding: 0%;
+}
+nav > ul{
+    background-color: blue;
+    display: table;
+    width: 100%;
+}
+
+nav > ul > li{
+    float: left;
 }
