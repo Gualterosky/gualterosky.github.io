@@ -27,11 +27,15 @@ nav ul{
     padding: 0%;
 }
 nav > ul{
-    background-color: blue;
+    background-color: none;
     display: table;
     width: 100%;
 }
 
 nav > ul > li{
     float: left;
+}
+
+h1{
+    color: aliceblue;
 }
