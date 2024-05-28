@@ -1,9 +1,19 @@
 body{
     background-color:#212429;
+    margin: 2%;
 }
 
-p{
+p{/*parrafos*/
     color: aliceblue;
+}
+
+nav{/*Menu*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 60px;
+    margin-left: 2%;
+    backdrop-filter: blur(10px); /* Efecto de desenfoque */
 }
 
 nav a{
@@ -14,8 +24,8 @@ nav a{
     transition: .4s;
 }
 
-nav a:hover{
-    background: rgba(0, 0, 0, .5);
+nav a:hover{ /*casilla al pasar el raton*/
+    background: rgba(0, 0, 0, 0.5);
 }
 
 nav li{
@@ -36,6 +46,46 @@ nav > ul > li{
     float: left;
 }
 
-h1{
+h1{/*Titulos*/
     color: aliceblue;
+}
+
+.texto-1{
+    text-decoration: underline;
+    color: rgb(73, 113, 223);
+    text-shadow: 1px 0.5px color(#ddd);
+}
+
+.CV{/*Boton CV*/
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    background: #1f4b6b;
+  }
+.CV:active {
+    color: red;
+  }
+
+button:hover {/*Botones general*/
+    filter: opacity(0.5);
+  }
+
+button:active {
+    color: aliceblue;
+  }
+
+
+
+#sobre-mi{
+    border: 1px black solid;
+    border-radius: 5px;
 }
