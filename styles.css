@@ -1,6 +1,17 @@
 body{
     background-color:#212429;
-    margin: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 1.5%;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+}
+.menu{
+    background-color: #272b33;
+}
+
+main{
+    width: 100%;
 }
 
 p{/*parrafos*/
@@ -13,6 +24,7 @@ nav{/*Menu*/
     left: 0;
     height: 60px;
     margin-left: 2%;
+    width: 100%;
     backdrop-filter: blur(10px); /* Efecto de desenfoque */
 }
 
@@ -52,12 +64,11 @@ h1{/*Titulos*/
 
 .texto-1{
     text-decoration: underline;
-    color: rgb(73, 113, 223);
-    text-shadow: 1px 0.5px color(#ddd);
+    color: rgb(0, 176, 240);
 }
 
 .CV{/*Boton CV*/
-    min-width: 130px;
+    width: 220px;
     height: 40px;
     color: #fff;
     padding: 5px 10px;
@@ -69,23 +80,38 @@ h1{/*Titulos*/
     outline: none;
     border-radius: 5px;
     border: none;
-    background: #1f4b6b;
+    background: #156082;
   }
-.CV:active {
-    color: red;
+.CV:hover {/*Botones general*/
+    filter: brightness(1.5);
+  }
+
+button{/*Botones general*/
+    min-width: 130px;
+    height: 28px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    background: #156082;
+    box-shadow: 5px 5px 5px rgb(95, 94, 94);
   }
 
 button:hover {/*Botones general*/
     filter: opacity(0.5);
+    box-shadow: 1px 1px 1px #272b33;
   }
 
 button:active {
     color: aliceblue;
   }
 
-
-
-#sobre-mi{
-    border: 1px black solid;
-    border-radius: 5px;
+article li{
+    color: #ddd;
 }
