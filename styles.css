@@ -26,6 +26,7 @@ nav{/*Menu*/
     margin-left: 2%;
     width: 100%;
     backdrop-filter: blur(10px); /* Efecto de desenfoque */
+    z-index: 3;
 }
 
 nav a{
@@ -81,6 +82,7 @@ h1{/*Titulos*/
     border-radius: 5px;
     border: none;
     background: #156082;
+    z-index: 2;
   }
 .CV:hover {/*Botones general*/
     filter: brightness(1.5);
@@ -111,6 +113,28 @@ button:hover {/*Botones general*/
 button:active {
     color: aliceblue;
   }
+#tabla-proyectos{
+    border-spacing: 25px
+}
+
+.proyectos{
+    background-color: #156082;
+    border-radius: 20px;
+    width: 300px;
+    height: 350px;
+    text-align: center;
+    margin: 3px;
+}
+
+.proyectos img{
+    border-radius: 15px;
+    width: 90%;
+
+}
+
+.proyectos h3{
+    color: #fff;
+}
 
 article li{
     color: #ddd;
