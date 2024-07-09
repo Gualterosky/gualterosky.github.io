@@ -1,7 +1,7 @@
 body{
     background-color:#212429;
-    margin-left: 2%;
-    margin-right: 2%;
+    margin-left: 3%;
+    margin-right: 3%;
     margin-top: 1.5%;
     display: flex;
     justify-content: center; /* Centra horizontalmente */
@@ -16,6 +16,7 @@ main{
 
 p{/*parrafos*/
     color: aliceblue;
+    font-size: large;
 }
 
 nav{/*Menu*/
@@ -31,6 +32,7 @@ nav{/*Menu*/
 
 nav a{
     color: #ddd;
+    font-size: large;
     display: block;
     text-decoration: none;
     padding: 0 2.5em;
@@ -117,11 +119,16 @@ button:active {
     border-spacing: 25px
 }
 
+table{
+    font-size: large;
+    color: #fff;
+}
+
 .proyectos{
     background-color: #156082;
     border-radius: 20px;
     width: 300px;
-    height: 350px;
+    height: 355px;
     text-align: center;
     margin: 3px;
 }
@@ -138,8 +145,9 @@ button:active {
 
 article li{
     color: #ddd;
+    font-size: large;
 }
-.Perfil{
-    width: 45%;
+#Informacion{
+    width: 50%;
     text-align: justify;
 }
