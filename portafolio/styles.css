@@ -6,7 +6,7 @@ body{
     display: flex;
     justify-content: center; /* Centra horizontalmente */
 }
-.menu{
+#menu{
     background-color: #272b33;
 }
 
