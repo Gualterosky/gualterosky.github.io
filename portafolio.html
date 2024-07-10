@@ -2,9 +2,9 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Gualterosky</title>
-    <link rel="stylesheet" href="styles.css"><!-- Llama al archivo de estilos -->
+    <link rel="stylesheet" href="/portafolio/styles.css"><!-- Llama al archivo de estilos -->
     <script src="script.js"></script> <!-- Llama al archivo javascript -->
 </head>
 <body>
@@ -12,7 +12,7 @@
         <nav>
             <ul>
                 <li><a href="https://gualterosky.github.io/"><img src="C:\Users\Kevin Gualteros\GitHub Repository\gualterosky.github.io\portafolio\images\Gualterosky.png" alt="Gualterosky" width="180px"></a></li>
-                <li><a href="https://gualterosky.github.io/">Inicio</a></li>
+                <li><a href="#menu">Inicio</a></li>
                 <li><a href="#sobre-mi">Sobre mi</a></li>
                 <li><a href="#proyectos">Proyectos</a></li>
                 <li><a href="/">Contacto</a></li>
@@ -20,60 +20,74 @@
         </nav>
     </header>
     <main>
-        <div id="menu"><br><br></div>
+        <div id="menu">
+            <br><br><!--Espacio en menu-->
+        </div>
         <table id="sobre-mi">
             <tr>
-                <th><img src="C:\Users\Kevin Gualteros\GitHub Repository\gualterosky.github.io\portafolio\images\Kevin_Leonardo_Gualteros_Mora.png" alt="Kevin_Leonardo_Gualteros_Mora" width="60%">
-                    <th><div>
-                        <p>Hola,<img src="/images/Hand-hello.png" width="10%">me llamo <br>
-                            <span style="font-size: 24px; font-weight: bold;">Kevin Leonardo Gualteros Mora</span>
-                        </p>
-                        <p class="texto-1">Desarrollador de software</p><br>
-                        <a href="https://descargar.cv" target="_blank"><button class="CV" type="button">Descargar CV</button></a><br>
-                    </div>
-                </th></tr>
+                <th>
+                    <img src="C:\Users\Kevin Gualteros\GitHub Repository\gualterosky.github.io\portafolio\images\Kevin_Leonardo_Gualteros_Mora.png" alt="Kevin_Leonardo_Gualteros_Mora" width="60%">
+                    <th>
+                        <div>
+                            <p>Hola,<img src="/images/Hand-hello.png" width="10%">me llamo <br>
+                            <span style="font-size: 24px; font-weight: bold;">Kevin Leonardo Gualteros Mora</span></p>
+                            <p class="texto-1">Desarrollador de software</p>
+                            <br>
+                            <a href="C:\Users\Kevin Gualteros\GitHub Repository\gualterosky.github.io\portafolio\cv\CV_Kevin_Gualteros.pdf" target="_blank"><button class="CV" type="button">Descargar CV</button></a><br>
+                        </div>
+                    </th>
+                </th>
+            </tr>
         </table>
-        <div id="Informacion">
-            <h1>Sobre mi</h1>
-            <a href="#Perfil"><button type="button">Perfil</button></a>
-            <a href="#Estudios"><button type="button">Estudios</button></a>
-            <a href="#Habilidades"><button type="button">Habilidades</button></a>
-            <article id="Perfil">
-                <p>Soy estudiante de la carrera programacion Full Stack de Talento Tech, con habilidades en al area de tecnologia y computacion Mi formación abarca conocimientos sólidos en computación, ventas e idiomas como inglés intermedio, portugués avanzado y frances basico. Además, cuento con experiencia laboral en el área del turismo y el comercio. En mis proyectos relacionados con la tecnología, he tenido la oportunidad de demostrar mi compromiso, resiliencia y capacidad de innovación.</p>
-            </article>
-            <article id="Estudios">
-                <ul>
-                    <li>Contabilización de operaciones comerciales y financieras-SENA</li>
-                    <li>Controles y seguridad informática-SENA</li>
-                    <li>Procesos de soporte técnico para el mantenimiento de equipos de computo-SENA</li>
-                    <li>Introducción al desarrollo web: HTML y CCS-Google Activate</li>
-                    <li>Introducción a la terminal de GNU-Linux-EdTeam</li>
-                    <li>Introducción a la programación orientada a objetos-EdTeam</li>
-                </ul>
-            </article>
-            <article id="Habilidades">
-                <table>
-                    <tr>
-                        <td>HTML</td>
-                        <td>CCS</td>
-                        <td>JavaScript</td>
-                        <td>GitHub</td>
-                    </tr>
-                    <tr>
-                        <td>English</td>
-                        <td>Portugues</td>
-                        <td>Dato 3</td>
-                        <td>Dato 4</td>
-                    </tr>
-                    <tr>
-                        <td>Dato 1</td>
-                        <td>Dato 2</td>
-                        <td>Dato 3</td>
-                        <td>Dato 4</td>
-                    </tr>
-                </table>
-                
-            </article>
+        <div>
+            <table>
+                <tr>
+                    <td>
+                        <h1>Sobre mi</h1>
+                        <a href="#Perfil"><button type="button">Perfil</button></a>
+                        <a href="#Estudios"><button type="button">Estudios</button></a>
+                        <a href="#Habilidades"><button type="button">Habilidades</button></a>
+                        <article id="Perfil" class="Informacion">
+                            <p>Soy estudiante de la carrera programacion Full Stack de Talento Tech, con habilidades en al area de tecnologia y computacion Mi formación abarca conocimientos sólidos en computación, ventas e idiomas como inglés intermedio, portugués avanzado y frances basico. Además, cuento con experiencia laboral en el área del turismo y el comercio. En mis proyectos relacionados con la tecnología, he tenido la oportunidad de demostrar mi compromiso, resiliencia y capacidad de innovación.</p>
+                        </article>
+                        <article id="Estudios" class="Informacion">
+                            <ul>
+                                <li>Contabilización de operaciones comerciales y financieras-SENA</li>
+                                <li>Controles y seguridad informática-SENA</li>
+                                <li>Procesos de soporte técnico para el mantenimiento de equipos de computo-SENA</li>
+                                <li>Introducción al desarrollo web: HTML y CCS-Google Activate</li>
+                                <li>Introducción a la terminal de GNU-Linux-EdTeam</li>
+                                <li>Introducción a la programación orientada a objetos-EdTeam</li>
+                            </ul>
+                        </article>
+                        <article id="Habilidades" class="Informacion">
+                            <table>
+                                <tr>
+                                    <td>HTML</td>
+                                    <td>CCS</td>
+                                    <td>JavaScript</td>
+                                    <td>GitHub</td>
+                                </tr>
+                                <tr>
+                                    <td>English</td>
+                                    <td>Portugues</td>
+                                    <td>Dato 3</td>
+                                    <td>Dato 4</td>
+                                </tr>
+                                <tr>
+                                    <td>Dato 1</td>
+                                    <td>Dato 2</td>
+                                    <td>Dato 3</td>
+                                    <td>Dato 4</td>
+                                </tr>
+                            </table>
+                        </article>
+                    </td>
+                    <td>
+                        imagen
+                    </td>
+                </tr>
+            </table>
         </div>
         <br>
         <div id="proyectos">

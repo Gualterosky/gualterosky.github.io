@@ -147,7 +147,7 @@ article li{
     color: #ddd;
     font-size: large;
 }
-#Informacion{
+.Informacion{
     width: 50%;
     text-align: justify;
 }
