@@ -84,3 +84,9 @@ body{
     filter: opacity(0.5);
     box-shadow: 1px 1px 1px rgb(165, 161, 161);
 }
+
+iframe{
+    position: fixed;
+    top: 0;
+    left: 0;
+}
