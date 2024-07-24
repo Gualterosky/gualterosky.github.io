@@ -1,5 +1,6 @@
 body{
-    background-image: url('C:\Users\Kevin Gualteros\GitHub Repository\gualterosky.github.io\Images\Banner gualterosky.png');
+    background-image: url('https://gualterosky.github.io/Images/Banner%20gualterosky.png');
+    background-size: cover;
     font-family: Inter;
     font-size: 14px;
 }
