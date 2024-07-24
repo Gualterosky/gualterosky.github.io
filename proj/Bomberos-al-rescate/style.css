@@ -1,0 +1,38 @@
+.map-container {
+    position: relative;
+    width: 100%;
+    max-width: 90%; /* Ajusta el ancho máximo según tus necesidades */
+    margin: 0 auto; /* Centra el contenedor */
+}
+
+.map-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.map-region {
+    position: absolute;
+    display: block;
+    width: 30px; /* Ajusta el tamaño según tu diseño */
+    height: 30px; /* Ajusta el tamaño según tu diseño */
+    background-color: rgba(0, 0, 0, 0.1); /* Color de fondo */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+/* Estilos individuales para cada región */
+#region1-1 {
+    top: 14px; /* Ajusta la posición según tu diseño */
+    left: 19px; /* Ajusta la posición según tu diseño */
+}
+
+
+    /* Estilos para las casillas azules */
+    .map-region.blue {
+        background-color: rgba(0, 0, 255, 0.1);
+    }
+
+    /* Estilos para las casillas rojas */
+    .map-region.red {
+        background-color: rgba(255, 0, 0, 0.1);
+    }

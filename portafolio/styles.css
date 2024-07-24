@@ -71,9 +71,6 @@ h1{/*Titulos*/
 }
 
 .CV{/*Boton CV*/
-    width: 220px;
-    height: 40px;
-    color: #fff;
     padding: 5px 10px;
     font-weight: bold;
     cursor: pointer;
@@ -85,12 +82,17 @@ h1{/*Titulos*/
     border: none;
     background: #156082;
     z-index: 2;
+    width: 200px; /* Ancho del botón */
+    height: 28px;
+    background-image: url('file:///C:/Users/Kevin%20Gualteros/GitHub%20Repository/gualterosky.github.io/images/cv.png');
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el botón */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
   }
 .CV:hover {/*Botones general*/
     filter: brightness(1.5);
   }
 
-button{/*Botones general*/
+.Profile_button{/*Botones general*/
     min-width: 130px;
     height: 28px;
     color: #fff;
@@ -107,16 +109,16 @@ button{/*Botones general*/
     box-shadow: 5px 5px 5px rgb(95, 94, 94);
   }
 
-button:hover {/*Botones general*/
+.Profile_button:hover {/*Botones general*/
     filter: opacity(0.5);
     box-shadow: 1px 1px 1px #272b33;
   }
 
-button:active {
+.Profile_button:active {
     color: aliceblue;
   }
 #tabla-proyectos{
-    border-spacing: 25px
+    border-spacing: 30px
 }
 
 table{
@@ -125,19 +127,24 @@ table{
 }
 
 .proyectos{
-    background-color: #156082;
+    background-color: #383D46;
     border-radius: 20px;
     width: 300px;
-    height: 355px;
+    height: auto;
     text-align: center;
     margin: 3px;
+    po
 }
 
-.proyectos img{
-    border-radius: 15px;
-    width: 90%;
-
+.proyectos img{ /*imagenes de proyectos*/
+    border-radius: 12px;
+    width: 92%;
+    vertical-align: top; /* Alinea la imagen hacia arriba dentro de su contenedor */
 }
+
+.proyectos img:hover{
+    filter: brightness(1.15);
+  }
 
 .proyectos h3{
     color: #fff;
@@ -150,4 +157,8 @@ article li{
 .Informacion{
     width: 50%;
     text-align: justify;
+}
+
+.GitHub_button{
+    margin-right: 15px;
 }

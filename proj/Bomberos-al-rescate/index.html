@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Interactivo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="map-container">
+        <div class="map-area">
+            <img src="C:\Users\Kevin Gualteros\GitHub Repository\gualterosky.github.io\Proyectos\Bomberos-al-rescate\img\Mapa.png" alt="Mapa" class="map-image">
+            <a href="#" class="map-region" id="region1-1"></a>
+
+
+            <script>
+                // Configuración del tamaño de cada casilla
+                const casillaAncho = 31.1; // Ancho de cada casilla en píxeles
+                const casillaAlto = 31; // Alto de cada casilla en píxeles
+                const inicioX = 19; // Posición inicial en píxeles desde la izquierda
+                const inicioY = 14; // Posición inicial en píxeles desde arriba
+            
+                // Seleccionar el contenedor del mapa
+                const mapContainer = document.querySelector('.map-container');
+            
+                // Generar los enlaces <a> para cada casilla del mapa
+                for (let row = 0; row < 36; row++) { //filas
+                    for (let col = 0; col < 38; col++) { //columnas
+                        const region = document.createElement('a');
+                        region.href = '#';
+                        region.classList.add('map-region');
+                        region.style.top = `${inicioY + row * casillaAlto}px`; // Posición vertical basada en la fila
+                        region.style.left = `${inicioX + col * casillaAncho}px`; // Posición horizontal basada en la columna
+            
+                        // Lógica para alternar colores azul y rojo
+                        if ((row + col) % 2 === 0) {
+                            region.classList.add('blue'); // Agregar clase 'blue' para casillas pares
+                        } else {
+                            region.classList.add('red'); // Agregar clase 'red' para casillas impares
+                        }
+                    
+
+                        mapContainer.appendChild(region); // Agregar la casilla al contenedor
+                    }
+                }
+            </script>
+
+        </div>
+    </div>
+</body>
+</html>

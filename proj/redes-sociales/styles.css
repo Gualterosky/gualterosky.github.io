@@ -1,0 +1,85 @@
+body{
+    background-color: hsl(0, 0%, 8%);
+    font-family: Inter;
+    font-size: 14px;
+}
+
+#content{
+    width: 30%;
+    min-height: 425px;
+    background-color: hsl(0, 0%, 12%);
+    margin: 100px auto;
+    border: 1px solid hsl(0, 0, 12%);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#menu{
+    text-align: center;
+}
+
+#header img{
+    width: 100px;
+    margin-top: 50px;
+    border-radius: 100%;
+}
+
+#header #title{
+    color: hsl(0, 0%, 100%)
+}
+
+#header p{
+    color: hsl(75, 94%, 57%);
+    margin-bottom: 30px;
+}
+
+#header blockquote{
+    color: #CCCCCC;
+    margin-bottom: 20px;
+
+}
+
+#sections button.btn{
+    width: 80%;
+    background-color: hsl(0, 0%, 20%);
+    margin: 0 auto;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    align-items: center; 
+}
+
+#sections a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+#sections a:hover{
+    color: white;
+}
+
+#sections button:hover{
+    background-color: gray;
+    filter: opacity(0.5);
+    box-shadow: 1px 1px 1px rgb(165, 161, 161);
+}
+
+#sections button img{
+    width: 25px;
+    margin-right: 5px;
+}
+
+#sections button.webbtn{
+    width: 40%;
+    background-color: hsl(0, 0%, 20%);
+    margin: 0 auto;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+#sections button.webbtn:hover{
+    background-color: gray;
+    filter: opacity(0.5);
+    box-shadow: 1px 1px 1px rgb(165, 161, 161);
+}
