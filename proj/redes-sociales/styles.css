@@ -85,8 +85,13 @@ body{
     box-shadow: 1px 1px 1px rgb(165, 161, 161);
 }
 
-iframe{
+#ifnav{
     position: fixed;
     top: 0;
     left: 0;
+}
+
+#iffooter
+{
+    width: 100%;
 }
