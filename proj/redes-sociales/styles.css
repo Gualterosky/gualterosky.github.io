@@ -48,7 +48,6 @@ body{
     padding: 15px;
     border-radius: 5px;
     align-items: center; 
-    z-index: 3;
 }
 
 #sections a{
@@ -93,6 +92,7 @@ body{
     top: 0;
     left: 0;
     z-index: 5;
+    height: 60px;
 }
 
 footer{
