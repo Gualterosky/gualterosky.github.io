@@ -61,7 +61,6 @@ body{
 
 #sections button:hover{
     background-color: gray;
-    filter: brightness(1.5);
     box-shadow: 1px 1px 1px rgb(165, 161, 161);
     transform: scale(1.1);
 }
@@ -82,7 +81,6 @@ body{
 
 #sections button.webbtn:hover{
     background-color: gray;
-    filter: brightness(1.5);
     box-shadow: 1px 1px 1px rgb(165, 161, 161);
     transform: scale(1.1);
 }
