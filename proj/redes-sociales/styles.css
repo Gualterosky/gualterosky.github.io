@@ -48,6 +48,7 @@ body{
     padding: 15px;
     border-radius: 5px;
     align-items: center; 
+    z-index: 3;
 }
 
 #sections a{
