@@ -92,6 +92,16 @@ body{
     z-index: 5;
 }
 
-#iffooter{
-    bottom: 0;
+footer {
+    background-color: #333; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    text-align: center; /* Centrado del contenido */
+    padding: 20px; /* Espaciado interior */
+    bottom: 0; /* Fijar al fondo de la página */
 }
+
+footer p {
+    margin: 0; /* Eliminar margen interior */
+}
+</style>
+
