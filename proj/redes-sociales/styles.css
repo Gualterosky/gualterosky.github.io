@@ -63,6 +63,7 @@ body{
     background-color: gray;
     filter: opacity(0.5);
     box-shadow: 1px 1px 1px rgb(165, 161, 161);
+    transform: scale(1.1);
 }
 
 #sections button img{
@@ -83,6 +84,7 @@ body{
     background-color: gray;
     filter: opacity(0.5);
     box-shadow: 1px 1px 1px rgb(165, 161, 161);
+    transform: scale(1.1);
 }
 
 #ifnav{

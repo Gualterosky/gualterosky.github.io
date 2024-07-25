@@ -4,8 +4,14 @@ body{
     margin-right: 3%;
     margin-top: 1.5%;
     display: flex;
-    justify-content: center; /* Centra horizontalmente */
+    justify-content: center;
 }
+
+p{/*parrafos*/
+    color: aliceblue;
+    font-size: large;
+}
+
 #menu{
     background-color: #272b33;
 }
@@ -14,12 +20,8 @@ main{
     width: 100%;
 }
 
-p{/*parrafos*/
-    color: aliceblue;
-    font-size: large;
-}
-
-nav{/*Menu*/
+/*Menu*/
+nav{
     position: fixed;
     top: 0;
     left: 0;
@@ -61,11 +63,11 @@ nav > ul > li{
     float: left;
 }
 
-h1{/*Titulos*/
+h1{
     color: aliceblue;
 }
 
-.texto-1{
+.texto-1{/*Desarrollador de software*/
     text-decoration: underline;
     color: rgb(0, 176, 240);
 }
@@ -82,14 +84,15 @@ h1{/*Titulos*/
     border: none;
     background: #156082;
     z-index: 2;
-    width: 200px; /* Ancho del botón */
+    width: 200px;
     height: 28px;
     background-image: url('file:///C:/Users/Kevin%20Gualteros/GitHub%20Repository/gualterosky.github.io/images/cv.png');
     background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el botón */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
   }
 .CV:hover {/*Botones general*/
-    filter: brightness(1.5);
+    filter: brightness(1.5); /*Hace brillante el boton*/
+    transform: scale(1.1); /*Agranda el boton*/
   }
 
 .Profile_button{/*Botones general*/
@@ -117,15 +120,49 @@ h1{/*Titulos*/
 .Profile_button:active {
     color: aliceblue;
   }
+
+  /*Contenido sobre mi*/
+#contenido td{
+    width: 50%;
+}
+
+#imagen-contenido{
+    text-align: center;
+}
+
+#contenido img{
+    max-width: 80%;
+}
+
+/*Tabla de habilidades*/
+#Habilidades-table{
+    border-spacing: 10px
+}
+
+#Habilidades-table td{
+    width: 70px;
+    height: 70px;
+    background-color: rgb(221, 221, 221, 0.3);
+    border-radius: 15px;
+    text-align: center;
+}
+
+#Habilidades-table td:hover{
+    transform: scale(1.1);
+}
+
+#Habilidades-table img{
+    min-width: 35px;
+    max-height: 52px;
+    max-width: 52px;
+}
+
+/*Tabla de proyectos*/
 #tabla-proyectos{
     border-spacing: 30px
 }
 
-table{
-    font-size: large;
-    color: #fff;
-}
-
+/*Contenedor del proyecto*/
 .proyectos{
     background-color: #383D46;
     border-radius: 20px;
@@ -133,7 +170,6 @@ table{
     height: auto;
     text-align: center;
     margin: 3px;
-    po
 }
 
 .proyectos img{ /*imagenes de proyectos*/
@@ -142,9 +178,10 @@ table{
     vertical-align: top; /* Alinea la imagen hacia arriba dentro de su contenedor */
 }
 
-.proyectos img:hover{
+.proyectos:hover{ 
     filter: brightness(1.15);
-  }
+    transform: scale(1.1); 
+}
 
 .proyectos h3{
     color: #fff;
@@ -154,11 +191,20 @@ article li{
     color: #ddd;
     font-size: large;
 }
-.Informacion{
-    width: 50%;
-    text-align: justify;
-}
 
 .GitHub_button{
     margin-right: 15px;
+}
+
+/*Pie de pagina*/
+footer{
+    background-color: #333; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    text-align: center; /* Centrado del contenido */
+    padding: 15px; /* Espaciado interior */
+    bottom: 0; /* Fijar al fondo de la página */   
+}
+
+footer p{
+    margin: 0;
 }
