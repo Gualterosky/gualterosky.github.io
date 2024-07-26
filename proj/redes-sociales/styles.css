@@ -1,12 +1,31 @@
+@media screen and (max-width: 620px){
+    #content {
+        width: 95%;
+    }
+}
+
+@media screen and (min-width: 621px) and (max-width: 999px){
+    #content {
+        width: 55%;
+    }
+}
+
+@media screen and (min-width: 1000px){
+    #content {
+        width: 40%;
+    }
+}
+
 body{
     background-image: url('https://gualterosky.github.io/Images/Banner%20gualterosky.png');
     background-size: 100%;
+    background-repeat: no-repeat;
     font-family: Inter;
     font-size: 14px;
+    background-attachment: fixed;
 }
 
 #content{
-    width: 30%;
     min-height: 425px;
     background-color: hsl(0, 0%, 12%, 0.97);
     margin: 100px auto;
