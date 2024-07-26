@@ -1,13 +1,42 @@
 @media screen and (max-width: 620px){
+    #FlexX2{
+        display: block;
+    }
+
+    .Flex1 img{
+        width: 90%;
+    }
+    .Flex2 img{
+        width: 40%;
+    }
 
 }
 
 @media screen and (min-width: 621px) and (max-width: 999px){
-
+    #FlexX2{
+        display: block;
+    }
+    
+    .Flex1 img{
+        width: 50%;
+    }
+    .Flex2 img{
+        width: 40%;
+    }
 }
 
 @media screen and (min-width: 1000px){
+    #FlexX2{
+        display: flex;
+    }
 
+    .Flex1 img{
+        width: 80%;
+    }
+
+    .Flex2 img{
+        width: 50%;
+    }
 }
 
 body{
@@ -81,7 +110,6 @@ h1{
 
 /*2 elementos alineados*/
 #FlexX2 {
-    display: flex; /* Usa flexbox para alinear elementos */
     text-align: center;
     align-items: center;
 }
