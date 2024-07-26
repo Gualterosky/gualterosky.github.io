@@ -1,3 +1,15 @@
+@media screen and (max-width: 620px){
+
+}
+
+@media screen and (min-width: 621px) and (max-width: 999px){
+
+}
+
+@media screen and (min-width: 1000px){
+
+}
+
 body{
     background-color:#212429;
     margin-left: 3%;
@@ -5,19 +17,6 @@ body{
     margin-top: 1.5%;
     display: flex;
     justify-content: center;
-}
-
-p{/*parrafos*/
-    color: aliceblue;
-    font-size: large;
-}
-
-#menu{
-    background-color: #272b33;
-}
-
-main{
-    width: 100%;
 }
 
 /*Menu*/
@@ -63,10 +62,40 @@ nav > ul > li{
     float: left;
 }
 
+p{/*parrafos*/
+    color: aliceblue;
+    font-size: large;
+}
+
+#menu{
+    background-color: #272b33;
+}
+
+main{
+    width: 100%;
+}
+
 h1{
     color: aliceblue;
 }
 
+/*2 elementos alineados*/
+#FlexX2 {
+    display: flex; /* Usa flexbox para alinear elementos */
+    text-align: center;
+    align-items: center;
+}
+
+#Flex1 {
+    flex: 1; /* Toma el espacio necesario */
+}
+
+#Flex2{
+    flex: 1;
+    margin-left: -50px;
+}
+
+/*Inicio*/
 .texto-1{/*Desarrollador de software*/
     text-decoration: underline;
     color: rgb(0, 176, 240);
