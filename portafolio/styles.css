@@ -1,4 +1,5 @@
-@media screen and (max-width: 620px){
+/*Telefonos*/
+@media screen and (max-width: 480px){
     #FlexX2{
         display: block;
     }
@@ -7,12 +8,16 @@
         width: 90%;
     }
     .Flex2 img{
-        width: 40%;
+        width: 60%;
     }
 
+    #pfpbutton{
+        text-align: center;
+    }
 }
 
-@media screen and (min-width: 621px) and (max-width: 999px){
+/*Tablets*/
+@media screen and (min-width: 481px) and (max-width: 768px){
     #FlexX2{
         display: block;
     }
@@ -20,14 +25,28 @@
     .Flex1 img{
         width: 50%;
     }
+
+    .Flex1{
+        width: 100%;
+    }
+
     .Flex2 img{
-        width: 40%;
+        width: 45%;
+    }
+
+    .Proyectos-flex{
+        display: block;
     }
 }
 
-@media screen and (min-width: 1000px){
+/*Pantallaspequeñas*/
+@media screen and (min-width: 769px) and (max-width: 1024px){
     #FlexX2{
         display: flex;
+    }
+
+    .Flex1{
+        width: 150%;
     }
 
     .Flex1 img{
@@ -35,7 +54,31 @@
     }
 
     .Flex2 img{
+        width: 60%;
+    }
+
+    .Proyectos-flex{
+        display: flex;
+    }
+
+}
+
+/*Computadoras*/
+@media screen and (min-width: 1025px){
+    #FlexX2{
+        display: flex;
+    }
+    
+    .Flex1{
+        width: 100%;
+    }   
+
+    .Flex2 img{
         width: 50%;
+    }
+
+    .Proyectos-flex{
+        display: flex;
     }
 }
 
@@ -124,6 +167,10 @@ h1{
 }
 
 /*Inicio*/
+
+#Hand-hello{
+    width: 30px;
+}
 .texto-1{/*Desarrollador de software*/
     text-decoration: underline;
     color: rgb(0, 176, 240);
@@ -152,7 +199,13 @@ h1{
     transform: scale(1.1); /*Agranda el boton*/
   }
 
-.Profile_button{/*Botones general*/
+    /*Contenido sobre mi*/
+
+    #contenido{
+        text-align: left;
+    }
+
+.Profile_button{
     min-width: 130px;
     height: 28px;
     color: #fff;
@@ -174,22 +227,9 @@ h1{
     box-shadow: 1px 1px 1px #272b33;
   }
 
-.Profile_button:active {
-    color: aliceblue;
+#contenido p{
+    text-align: justify;
   }
-
-  /*Contenido sobre mi*/
-#contenido td{
-    width: 50%;
-}
-
-#imagen-contenido{
-    text-align: center;
-}
-
-#contenido img{
-    max-width: 80%;
-}
 
 /*Tabla de habilidades*/
 #Habilidades-table{
@@ -215,8 +255,8 @@ h1{
 }
 
 /*Tabla de proyectos*/
-#tabla-proyectos{
-    border-spacing: 30px
+.Proyectos-flex {
+    text-align: center;
 }
 
 /*Contenedor del proyecto*/

@@ -1,18 +1,24 @@
-@media screen and (max-width: 620px){
+@media screen and (max-width: 480px){
     #content {
         width: 95%;
     }
 }
 
-@media screen and (min-width: 621px) and (max-width: 999px){
+@media screen and (min-width: 481px) and (max-width: 768px){
     #content {
-        width: 55%;
+        width: 60%;
     }
 }
 
-@media screen and (min-width: 1000px){
+@media screen and (min-width: 769px) and (max-width: 1024px){
     #content {
-        width: 40%;
+        width: 45%;
+    }
+}
+
+@media screen and (min-width: 1025px){
+    #content {
+        width: 35%;
     }
 }
 
