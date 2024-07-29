@@ -256,7 +256,7 @@ h1{
 
 /*Tabla de proyectos*/
 #tabla-proyectos{
-    width: 90%;
+    width: 80%;
     display: grid;
     grid-template-columns: 
     repeat(
