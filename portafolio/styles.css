@@ -255,8 +255,15 @@ h1{
 }
 
 /*Tabla de proyectos*/
-.Proyectos-flex {
-    text-align: center;
+#tabla-proyectos{
+    width: 90%;
+    display: grid;
+    grid-template-columns: 
+    repeat(
+        auto-fit,
+        minmax(150px, 1fr)
+    );
+    gap: 150px;
 }
 
 /*Contenedor del proyecto*/
