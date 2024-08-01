@@ -33,7 +33,7 @@ body{
 }
 
 .input-box input{
-    width: 100%;
+    width: 96%;
     height: 100%;
     background: transparent;
     border: none;
@@ -42,6 +42,8 @@ body{
     border-radius: 40px;
     font-size: 16px;
     color: #fff;
+
+    padding-left: 15px;
 }
 
 .input-box input::placeholder{
@@ -50,7 +52,7 @@ body{
 
 .input-box i{
     position: absolute;
-    right: 20px;
+    right: 15px;
     top: 50%;
     transform: translateY(-50%);
     font-size: 20px;
@@ -61,10 +63,11 @@ body{
     justify-content: space-between;
     font-size: 14.5px;
     margin: -15px 0 15px;
+    align-items: center;
 }
 
 .remember-forgot label input{
-    accent-color: #fff;
+    accent-color: #000000;
     margin-right: 3px;
 }
 
