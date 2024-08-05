@@ -9,7 +9,6 @@ a{
 #presentacion-inicio{
     height: 200px;
     width: 100%;
-    background: url('https://');
     background: white;
 }
 
@@ -86,7 +85,7 @@ header{
 
 footer{
     height: 100px;
-    background: palevioletred;
+    background: #1a2405;
 }
 
 @media all and (min-width:600px){
