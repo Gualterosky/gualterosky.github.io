@@ -8,6 +8,10 @@ body{
     background: linear-gradient(to left, #7e2c2e, #622044, #601e44);
 }
 
+a{
+    text-decoration: none;
+}
+
 #display{
     background: url('https://149366088.v2.pressablecdn.com/wp-content/uploads/2024/03/ubuntu-24.04-wallpaper.jpg') no-repeat;
     background-size: cover;

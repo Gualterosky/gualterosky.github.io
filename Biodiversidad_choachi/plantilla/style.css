@@ -2,11 +2,15 @@ body{
     background-color: #fff358;
     font-family: "Roboto", sans-serif;
 }
+a{
+    text-decoration: none;
+}
 
 #presentacion-inicio{
     height: 200px;
     width: 100%;
-    background: url('https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcRb9nNuSxzN5QhYKMlG0r2CrzwB1NvxgSufFVVNFXuMBYr5KRTSpOm7Pin07iaX_zbFj2WGwtLYUNKKzMyGci5unbrV6Gp_5FNzS5ELfA');
+    background: url('https://');
+    background: white;
 }
 
 .wrap{
@@ -27,8 +31,27 @@ header{
 }
 
 .main{
-    height: 320px;
+    height: auto;
     background-color: green;
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.content{
+    background-color: white;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.content img{
+    width: 95%;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+.content h2, .content p{
+    color: black;
 }
 
 .side h2{
@@ -53,6 +76,9 @@ header{
     height: 50px;
     margin-right: 10px;
 }
+.category h3{
+    color: white;
+}
 
 .side-right{
     background-color: #185a30;
@@ -67,11 +93,15 @@ footer{
     .side{
         flex: 1;
     }
+    .main{
+        grid-template-columns: auto auto;
+    }
 }
 
 @media all and (min-width: 800px){
     .main{
         flex: 3;
+        grid-template-columns: auto auto auto;
     }
 
     .main{
