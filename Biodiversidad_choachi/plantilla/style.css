@@ -7,19 +7,62 @@ a{
     text-decoration: none;
 }
 
-#slide-frame{
+#presentacion-inicio{
     height: 200px;
     width: 100%;
     background: white;
     position: relative;
+    animation: Slide 15s infinite alternate ease-in-out;
 }
 
-#slide-frame h1{
+#presentacion-inicio h1{
     position: absolute;
+    color: white;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
+    background: rgba(0, 0, 0, 0.6);
+    font-size: 40px;
+}
+
+#presentacion-inicio ul{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    height: 199px;
+}
+
+#presentacion-inicio li{
+    list-style: none;
+    height: 100%;
+}
+
+#presentacion-inicio img{
+    height: 100%;
+}
+
+@keyframes Slide{
+    0% {margin-left: 0%;}
+    10% {margin-left: 0%;}
+
+    10% {margin-left: 0%;}
+    20% {margin-left: 0%;}
+
+    20% {margin-left: 0%;}
+    30% {margin-left: 0%;}
+
+    30% {margin-left: 0%;}
+    40% {margin-left: 0%;}
+
+    40px {margin-left: 0%;}
+    50% {margin-left: 0%;}
+
+    50% {margin-left: 0%;}
+    60% {margin-left: 0%;}
+
+    70% {margin-left: 0%;}
+    100% {margin-left: 0%;}
 }
 
 .wrap{
