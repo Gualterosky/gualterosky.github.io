@@ -1,5 +1,3 @@
-// script.js
-
 document.addEventListener('DOMContentLoaded', function() {
     var navContainer = document.createElement('nav');
     navContainer.innerHTML = `
