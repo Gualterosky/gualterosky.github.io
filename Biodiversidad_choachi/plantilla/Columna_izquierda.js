@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <img src="https://gualterosky.github.io/Biodiversidad_choachi/img/Ico/Frog.png" alt="Anfibios y Reptiles">
                 <h3>Anfibios y reptiles</h3>
             </a>
-            <a class="category" href="https://">
+            <a class="category" href="https://colab.research.google.com/drive/1uzu7ibLi-rMQ66h9ZWlBbR8ps1tU5bfs?usp=sharing">
                 <img src="https://gualterosky.github.io/Biodiversidad_choachi/img/Ico/Plant.png" alt="Plantas">
                 <h3>Plantas</h3>
             </a>
