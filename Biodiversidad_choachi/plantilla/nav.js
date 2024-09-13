@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     navContainer.innerHTML = `
 <nav>
         <ul>
-            <li><a href="#"><img src="image.png" alt="Icono" width="180px"></a></li>
+            <li><a href="#"><img src="C:/Users/Kevin%20Gualteros/GitHub%20Repository/gualterosky.github.io/Biodiversidad_choachi/img/Ico/Icon.png" alt="Icono" width="180px"></a></li>
             <li><a href="#s">Animales</a></li>
             <li><a href="#s">Plantas</a></li>
             <li><a href="/">Ecosistemas</a></li>
