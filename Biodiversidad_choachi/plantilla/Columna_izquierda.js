@@ -1,13 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Selecciona el contenedor con la clase 'side side-left'
     var targetContainer = document.querySelector('.side.side-left');
 
-    // Asegúrate de que el contenedor existe antes de agregar contenido
     if (targetContainer) {
-        // Crea el contenedor del div
         var divContainer = document.createElement('div');
 
-        // Agrega el contenido HTML del div
         divContainer.innerHTML = `
             <h2>Animales y Plantas</h2><hr>
             <a class="category" href="https://">
@@ -32,7 +28,6 @@ document.addEventListener('DOMContentLoaded', function() {
             </a>
         `;
 
-        // Añade el contenedor dentro del contenedor objetivo
         targetContainer.appendChild(divContainer);
     } else {
         console.error("No se encontró el contenedor con la clase '.side.side-left'.");
