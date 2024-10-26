@@ -1,15 +1,24 @@
 /*Telefonos*/
 @media screen and (max-width: 480px){
-    #FlexX2{
+    .FLEX{
         display: block;
     }
 
-    .Flex1 img{
+    .Flex1A img{
         width: 90%;
     }
-    .Flex2 img{
+    .Flex2A img{
         width: 60%;
     }
+
+    .Flex1B{
+        width: 90%;
+    }
+
+    .Flex2B{
+        width: 60%;
+    }
+
 
     #pfpbutton{
         text-align: center;
@@ -18,20 +27,24 @@
 
 /*Tablets*/
 @media screen and (min-width: 481px) and (max-width: 768px){
-    #FlexX2{
+    .FLEX{
         display: block;
     }
     
-    .Flex1 img{
+    .Flex1A img{
         width: 50%;
     }
 
-    .Flex1{
-        width: 100%;
+    .Flex2A img{
+        width: 45%;
     }
 
-    .Flex2 img{
-        width: 45%;
+    .Flex1B{
+        width: 50%;
+    }
+
+    .Flex2B{
+        width: 50%;
     }
 
     .Proyectos-flex{
@@ -41,19 +54,15 @@
 
 /*Pantallaspequeñas*/
 @media screen and (min-width: 769px) and (max-width: 1024px){
-    #FlexX2{
+    .FLEX{
         display: flex;
     }
 
-    .Flex1{
+    .Flex1A img{
         width: 100%;
     }
 
-    .Flex1 img{
-        width: 50%;
-    }
-
-    .Flex2 img{
+    .Flex2A img{
         width: 60%;
     }
 
@@ -63,23 +72,24 @@
 
 }
 
-/*Computadoras*/
+/*Pantallas grandes*/
 @media screen and (min-width: 1025px){
-    #FlexX2{
+    .FLEX{
         display: flex;
     }
-    
-    .Flex1{
-        width: 100%;
-    }   
 
-    .Flex2 img{
+    .Flex1A img{
+        width: 50%;
+    }
+
+    .Flex2A img{
         width: 50%;
     }
 
     .Proyectos-flex{
         display: flex;
     }
+
 }
 
 body{
@@ -152,16 +162,17 @@ h1{
 }
 
 /*2 elementos alineados*/
-#FlexX2 {
+#FLEX{
     text-align: center;
     align-items: center;
+    justify-content: center;
 }
 
-#Flex1 {
+#Flex1A {
     flex: 1; /* Toma el espacio necesario */
 }
 
-#Flex2{
+#Flex2A{
     flex: 1;
     margin-left: -50px;
 }
