@@ -190,7 +190,7 @@ h1{
     z-index: 2;
     width: 200px;
     height: 28px;
-    background-image: url('https://gualterosky.github.io/images/cv.png');
+    background-image: url('https://gualterosky.github.io/Images/cv.png');
     background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el botón */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
   }
