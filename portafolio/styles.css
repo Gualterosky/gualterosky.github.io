@@ -1,95 +1,113 @@
-/*Telefonos*/
-@media screen and (max-width: 480px){
-    .FLEX{
+/* Telefonos */
+@media screen and (max-width: 480px) {
+    #Inicio{
         display: block;
     }
 
-    .Flex1A img{
+    .Flex1A, .Flex2A {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .Flex1A img {
         width: 90%;
     }
-    .Flex2A img{
+
+    .Flex2A img {
         width: 60%;
     }
 
-    .Flex1B{
-        width: 90%;
+    #contenido {
+        display: block;
     }
 
-    .Flex2B{
-        width: 60%;
-    }
-
-
-    #pfpbutton{
-        text-align: center;
+    .content, .imagen-contenido{
+        width: 100%;
     }
 }
 
-/*Tablets*/
-@media screen and (min-width: 481px) and (max-width: 768px){
-    .FLEX{
+/* Tablets */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    #Inicio{
         display: block;
     }
-    
-    .Flex1A img{
+
+    .Flex1A, .Flex2A {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .Flex1A img {
         width: 50%;
     }
 
-    .Flex2A img{
+    .Flex2A img {
         width: 45%;
     }
 
-    .Flex1B{
-        width: 50%;
-    }
-
-    .Flex2B{
-        width: 50%;
-    }
-
-    .Proyectos-flex{
+    #contenido {
         display: block;
+    }
+
+    .content, .imagen-contenido{
+        width: 100%;
     }
 }
 
-/*Pantallaspequeñas*/
-@media screen and (min-width: 769px) and (max-width: 1024px){
-    .FLEX{
+/* Pantallas pequeñas*/
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    #Inicio{
         display: flex;
+        justify-content: space-between;
     }
 
-    .Flex1A img{
+    .Flex1A, .Flex2A {
+        width: 48%;
+    }
+
+    .Flex1A img {
         width: 100%;
     }
 
-    .Flex2A img{
+    .Flex2A img {
         width: 60%;
     }
 
-    .Proyectos-flex{
+    #contenido {
         display: flex;
     }
 
+    .content, .imagen-contenido{
+        width: 50%;
+    }
 }
 
-/*Pantallas grandes*/
-@media screen and (min-width: 1025px){
-    .FLEX{
+/* Pantallas grandes */
+@media screen and (min-width: 1025px) {
+    #Inicio{
         display: flex;
+        justify-content: space-between; 
     }
 
-    .Flex1A img{
+    .Flex1A, .Flex2A {
+        width: 48%;
+    }
+
+    .Flex1A img {
         width: 50%;
     }
 
-    .Flex2A img{
-        width: 50%;
+    .Flex2A img {
+        width: 60%;
     }
 
-    .Proyectos-flex{
+    #contenido {
         display: flex;
     }
 
+    .content, .imagen-contenido{
+        width: 50%;
+    }
 }
 
 body{
@@ -99,6 +117,19 @@ body{
     margin-top: 1.5%;
     display: flex;
     justify-content: center;
+}
+
+p{
+    color: aliceblue;
+    font-size: large;
+}
+
+main{
+    width: 100%;
+}
+
+h1{
+    color: aliceblue;
 }
 
 /*Menu*/
@@ -144,25 +175,12 @@ nav > ul > li{
     float: left;
 }
 
-p{/*parrafos*/
-    color: aliceblue;
-    font-size: large;
-}
-
 #menu{
     background-color: #272b33;
 }
 
-main{
-    width: 100%;
-}
-
-h1{
-    color: aliceblue;
-}
-
-/*2 elementos alineados*/
-#FLEX{
+/*Inicio*/
+#Inicio{
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -176,8 +194,6 @@ h1{
     flex: 1;
     margin-left: -50px;
 }
-
-/*Inicio*/
 
 #Hand-hello{
     width: 30px;
@@ -203,18 +219,22 @@ h1{
     height: 28px;
     background-image: url('https://gualterosky.github.io/Images/cv.png');
     background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el botón */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-repeat: no-repeat;
   }
 .CV:hover {/*Botones general*/
     filter: brightness(1.5); /*Hace brillante el boton*/
-    transform: scale(1.1); /*Agranda el boton*/
-  }
+    transform: scale(1.1);
+}
 
-    /*Contenido sobre mi*/
+/*Contenido sobre mi*/
+#contenido{
+    /*flex-wrap: wrap;  Permite que los elementos se envuelvan en múltiples líneas */
+    text-align: left;
+}
 
-    #contenido{
-        text-align: left;
-    }
+.content, .imagen-contenido{
+    flex: 1; /* Hace que los elementos ocupen todo el espacio disponible */
+}
 
 .Profile_button{
     min-width: 130px;
@@ -233,14 +253,14 @@ h1{
     box-shadow: 5px 5px 5px rgb(95, 94, 94);
   }
 
-.Profile_button:hover {/*Botones general*/
+.Profile_button:hover{
     filter: opacity(0.5);
     box-shadow: 1px 1px 1px #272b33;
   }
 
 #contenido p{
     text-align: justify;
-  }
+}
 
 /*Tabla de habilidades*/
 #Habilidades-table{
@@ -290,7 +310,7 @@ h1{
 .proyectos img{ /*imagenes de proyectos*/
     border-radius: 12px;
     width: 92%;
-    vertical-align: top; /* Alinea la imagen hacia arriba dentro de su contenedor */
+    vertical-align: top;
 }
 
 .proyectos:hover{ 
