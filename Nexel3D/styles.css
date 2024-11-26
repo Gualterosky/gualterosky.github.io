@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #121212; /* Fondo oscuro */
+    color: #ffffff; /* Texto blanco */
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  header .container {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Espacio entre el icono y el texto */
+  }
+  
+  header .logo {
+    width: 50px; /* Tamaño del icono */
+    height: auto; /* Mantener proporciones */
+    border-radius: 8px; /* Opcional: bordes redondeados */
+  }
+  
+  header h1 {
+    font-size: 1.8rem;
+    color: #f7941d; /* Naranja destacado */
+  }
+  
+  header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  header nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), 
+                url('Captura001.jpg') no-repeat center center/cover;
+    text-align: center;
+    padding: 4rem 0;
+    color: #fff;
+  }
+  
+  .hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    margin-bottom: 2rem;
+  }
+  
+  .cta-buttons a {
+    display: inline-block;
+    padding: 1rem 2rem;
+    margin: 0.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+  }
+  
+  .btn-primary {
+    background: #f7941d; /* Naranja */
+    color: #fff;
+  }
+  
+  .btn-secondary {
+    background: #333;
+    color: #f7941d;
+    border: 2px solid #f7941d;
+  }
+  
+ .download {
+    padding: 2rem 0;
+    text-align: center;
+  }
+  
+  .download-buttons a {
+    display: inline-block;
+    padding: 1rem 2rem;
+    margin: 0.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+  
+  .btn-download {
+    background: #f7941d;
+    color: #fff;
+  }
+  
+  footer {
+    background: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  
+
+/*Historial de verciones*/
+  .history {
+    padding: 2rem 0;
+    background-color: #1a1a1a;
+    color: #fff;
+  }
+  
+  .history h3 {
+    text-align: center;
+    color: #f7941d; /* Naranja destacado */
+    margin-bottom: 1rem;
+  }
+  
+  .version {
+    margin-bottom: 2rem;
+    border: 1px solid #f7941d;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: #121212; /* Fondo más oscuro */
+  }
+  
+  .version h4 {
+    margin-top: 0;
+    color: #f7941d; /* Naranja */
+  }
+  
+  .version ul {
+    margin-top: 0.5rem;
+    padding-left: 1.5rem;
+  }
+  
+  .version li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .version a {
+    color: #f7941d;
+    text-decoration: none;
+  }
+  
+  .version a:hover {
+    text-decoration: underline;
+  }
+  
