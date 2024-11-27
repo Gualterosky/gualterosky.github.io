@@ -122,12 +122,6 @@ p{
   color: #f7941d;
 }
 
-.flex-container{
-  display: flex;
-  gap: 20px; /* Espacio entre los elementos */
-  justify-content: space-between; /* Distribuye el espacio de manera uniforme */
-}
-
 .video-wrapper{
   max-width: 600px;
   height: auto;
