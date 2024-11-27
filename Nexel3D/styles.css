@@ -151,3 +151,67 @@ body {
   }
   
   
+  #author-and-community {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra todos los elementos dentro de la sección */
+    padding: 2rem;
+    gap: 2rem;
+  }
+  
+  #author-and-community {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem; /* Espaciado entre los contenedores */
+  }
+  
+  .creator-cont{
+    margin-bottom: 2rem;
+    border: 1px solid #f7941d;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: #121212; /* Fondo más oscuro */
+    display: flex;
+    align-items: center; /* Centra verticalmente la imagen y el contenido */
+    justify-content: flex-start; /* Asegura que la imagen esté a la izquierda */  
+    max-width: 600px; /* Ajusta el ancho del contenedor */
+    gap: 1rem; /* Espaciado entre la imagen y el contenido */
+  }
+  
+  .circle-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; /* Hace que la imagen sea circular */
+    object-fit: cover; /* Asegura que la imagen no se deforme */
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column; /* Organiza el contenido en columna */
+    align-items: flex-start; /* Alinea el contenido a la izquierda */
+  }
+  
+  .content p {
+    margin: 0 0 0.2rem 0; /* Reduce el margen inferior del <p> */
+    font-size: 1rem; /* Ajusta el tamaño si es necesario */
+    color: #cccccc; /* Un color más tenue para el texto descriptivo */
+  }
+  
+  .content h3 {
+    margin: 0; /* Elimina cualquier margen extra */
+    font-size: 1.5rem;
+    color: #f7941d; /* Naranja destacado */
+  }  
+  
+  .link {
+    margin-top: 0.5rem;
+    text-decoration: none;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #f7941d; /* Naranja */
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
