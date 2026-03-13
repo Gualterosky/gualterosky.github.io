@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Choachí Vertical Fest 2027</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Barlow+Condensed:wght@300;400;600&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- CUERDA ANIMADA -->
+  <div class="rope-track" id="ropeTrack" aria-hidden="true">
+    <svg class="rope-svg" viewBox="0 0 40 3000" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path id="ropePath"
+        d="M20,0 C12,100 28,200 20,300 C12,400 28,500 20,600 C12,700 28,800 20,900 C12,1000 28,1100 20,1200 C12,1300 28,1400 20,1500 C12,1600 28,1700 20,1800 C12,1900 28,2000 20,2100 C12,2200 28,2300 20,2400 C12,2500 28,2600 20,2700 C12,2800 28,2900 20,3000"
+        stroke="var(--rope-color)" stroke-width="3.5" fill="none"
+        stroke-dasharray="4000" stroke-dashoffset="4000"
+        stroke-linecap="round"/>
+    </svg>
+    <div class="climber" id="climber">
+      <!-- Frame A: brazo izquierdo arriba -->
+      <svg class="climber-frame" id="frameA" viewBox="0 0 44 64" fill="none" xmlns="http://www.w3.org/2000/svg" width="44" height="64">
+        <!-- Casco -->
+        <ellipse cx="22" cy="9" rx="10" ry="8" fill="#e07840"/>
+        <ellipse cx="22" cy="9" rx="10" ry="8" fill="none" stroke="#c4612a" stroke-width="1.2"/>
+        <!-- Ventilación casco -->
+        <line x1="16" y1="5" x2="16" y2="13" stroke="#c4612a" stroke-width="1" stroke-linecap="round"/>
+        <line x1="22" y1="3" x2="22" y2="15" stroke="#c4612a" stroke-width="1" stroke-linecap="round"/>
+        <line x1="28" y1="5" x2="28" y2="13" stroke="#c4612a" stroke-width="1" stroke-linecap="round"/>
+        <!-- Barboquejo -->
+        <path d="M14 14 Q22 18 30 14" stroke="#c4612a" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+        <!-- Cara -->
+        <ellipse cx="22" cy="20" rx="7" ry="7.5" fill="#f0c090"/>
+        <!-- Ojos -->
+        <circle cx="19" cy="19" r="1.2" fill="#3a2010"/>
+        <circle cx="25" cy="19" r="1.2" fill="#3a2010"/>
+        <!-- Boca esfuerzo -->
+        <path d="M19 23 Q22 25 25 23" stroke="#c07040" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+        <!-- Torso con arnés -->
+        <rect x="15" y="27" width="14" height="16" rx="4" fill="#2e6b35"/>
+        <!-- Arnés líneas -->
+        <path d="M15 30 L22 35 L29 30" stroke="#c8a96e" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        <line x1="22" y1="35" x2="22" y2="43" stroke="#c8a96e" stroke-width="1.5" stroke-linecap="round"/>
+        <!-- Punto de anclaje cuerda -->
+        <circle cx="22" cy="27" r="2.5" fill="#c8a96e" stroke="#a88040" stroke-width="1"/>
+        <!-- BRAZO IZQUIERDO ARRIBA (alcanzando prensa) -->
+        <line x1="15" y1="30" x2="5"  y2="14" stroke="#2e6b35" stroke-width="4" stroke-linecap="round"/>
+        <!-- Mano izq agarra roca -->
+        <circle cx="5" cy="13" r="3.5" fill="#f0c090" stroke="#c09060" stroke-width="1"/>
+        <!-- BRAZO DERECHO ABAJO (empujando) -->
+        <line x1="29" y1="30" x2="38" y2="38" stroke="#2e6b35" stroke-width="4" stroke-linecap="round"/>
+        <circle cx="38" cy="39" r="3" fill="#f0c090" stroke="#c09060" stroke-width="1"/>
+        <!-- Pierna izquierda doblada arriba -->
+        <path d="M17 43 Q12 50 14 56" stroke="#1a4a20" stroke-width="4" stroke-linecap="round" fill="none"/>
+        <!-- Pie izq en roca -->
+        <ellipse cx="14" cy="57" rx="4" ry="2.5" fill="#333" transform="rotate(-20,14,57)"/>
+        <!-- Pierna derecha estirada abajo -->
+        <path d="M21 43 Q24 52 22 60" stroke="#1a4a20" stroke-width="4" stroke-linecap="round" fill="none"/>
+        <ellipse cx="22" cy="61" rx="4" ry="2.5" fill="#333"/>
+        <!-- Polvo de magnesio mano -->
+        <circle cx="5" cy="11" r="4" fill="white" opacity="0.18"/>
+      </svg>
+
+      <!-- Frame B: brazo derecho arriba -->
+      <svg class="climber-frame" id="frameB" viewBox="0 0 44 64" fill="none" xmlns="http://www.w3.org/2000/svg" width="44" height="64" style="display:none;">
+        <!-- Casco -->
+        <ellipse cx="22" cy="9" rx="10" ry="8" fill="#e07840"/>
+        <ellipse cx="22" cy="9" rx="10" ry="8" fill="none" stroke="#c4612a" stroke-width="1.2"/>
+        <line x1="16" y1="5" x2="16" y2="13" stroke="#c4612a" stroke-width="1" stroke-linecap="round"/>
+        <line x1="22" y1="3" x2="22" y2="15" stroke="#c4612a" stroke-width="1" stroke-linecap="round"/>
+        <line x1="28" y1="5" x2="28" y2="13" stroke="#c4612a" stroke-width="1" stroke-linecap="round"/>
+        <path d="M14 14 Q22 18 30 14" stroke="#c4612a" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+        <!-- Cara -->
+        <ellipse cx="22" cy="20" rx="7" ry="7.5" fill="#f0c090"/>
+        <circle cx="19" cy="19" r="1.2" fill="#3a2010"/>
+        <circle cx="25" cy="19" r="1.2" fill="#3a2010"/>
+        <path d="M19 23 Q22 25 25 23" stroke="#c07040" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+        <!-- Torso -->
+        <rect x="15" y="27" width="14" height="16" rx="4" fill="#2e6b35"/>
+        <path d="M15 30 L22 35 L29 30" stroke="#c8a96e" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        <line x1="22" y1="35" x2="22" y2="43" stroke="#c8a96e" stroke-width="1.5" stroke-linecap="round"/>
+        <circle cx="22" cy="27" r="2.5" fill="#c8a96e" stroke="#a88040" stroke-width="1"/>
+        <!-- BRAZO DERECHO ARRIBA -->
+        <line x1="29" y1="30" x2="39" y2="14" stroke="#2e6b35" stroke-width="4" stroke-linecap="round"/>
+        <circle cx="39" cy="13" r="3.5" fill="#f0c090" stroke="#c09060" stroke-width="1"/>
+        <!-- BRAZO IZQUIERDO ABAJO -->
+        <line x1="15" y1="30" x2="6"  y2="38" stroke="#2e6b35" stroke-width="4" stroke-linecap="round"/>
+        <circle cx="6"  cy="39" r="3" fill="#f0c090" stroke="#c09060" stroke-width="1"/>
+        <!-- Pierna derecha doblada arriba -->
+        <path d="M21 43 Q26 50 24 56" stroke="#1a4a20" stroke-width="4" stroke-linecap="round" fill="none"/>
+        <ellipse cx="24" cy="57" rx="4" ry="2.5" fill="#333" transform="rotate(20,24,57)"/>
+        <!-- Pierna izquierda estirada -->
+        <path d="M17 43 Q14 52 16 60" stroke="#1a4a20" stroke-width="4" stroke-linecap="round" fill="none"/>
+        <ellipse cx="16" cy="61" rx="4" ry="2.5" fill="#333"/>
+        <!-- Polvo magnesio -->
+        <circle cx="39" cy="11" r="4" fill="white" opacity="0.18"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav__logo">CVF</div>
+    <ul class="nav__links">
+      <li><a href="#about">Nosotros</a></li>
+      <li><a href="#actividades">Actividades</a></li>
+      <li><a href="#galeria">Galería</a></li>
+      <li><a href="#ubicacion">Ubicación</a></li>
+      <li><a href="#tickets">Tickets</a></li>
+    </ul>
+    <div class="nav__actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+        <span class="theme-toggle__sun">☀️</span>
+        <span class="theme-toggle__moon">🌙</span>
+      </button>
+      <a href="#tickets" class="btn btn--nav">Comprar</a>
+    </div>
+    <button class="nav__burger" id="burger" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="theme-toggle theme-toggle--mobile" id="themeToggleMobile" aria-label="Cambiar tema">
+      <span class="theme-toggle__sun">☀️</span>
+      <span class="theme-toggle__moon">🌙</span>
+      <span style="font-family:var(--font-cond);font-size:1rem;letter-spacing:.1em;">TEMA</span>
+    </button>
+    <ul>
+      <li><a href="#about" class="mm-link">Nosotros</a></li>
+      <li><a href="#actividades" class="mm-link">Actividades</a></li>
+      <li><a href="#galeria" class="mm-link">Galería</a></li>
+      <li><a href="#ubicacion" class="mm-link">Ubicación</a></li>
+      <li><a href="#tickets" class="mm-link">Tickets</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero__bg">
+      <div class="hero__overlay"></div>
+      <div class="hero__texture"></div>
+      <svg class="hero__mountains" viewBox="0 0 1440 320" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,320 L0,220 L120,140 L200,180 L320,80 L440,160 L560,60 L680,130 L760,50 L880,120 L960,40 L1080,110 L1200,30 L1320,100 L1440,20 L1440,320 Z" fill="rgba(15,40,20,0.55)"/>
+        <path d="M0,320 L0,260 L80,210 L160,240 L280,180 L400,220 L520,160 L640,200 L720,150 L840,190 L920,140 L1040,175 L1160,130 L1280,165 L1440,110 L1440,320 Z" fill="rgba(10,30,15,0.7)"/>
+      </svg>
+    </div>
+
+    <div class="hero__content reveal-item">
+      <div class="hero__badge">Choachí · Cundinamarca · Colombia</div>
+      <h1 class="hero__title">
+        <span class="hero__title-line">Choachí</span>
+        <span class="hero__title-line hero__title-line--accent">Vertical</span>
+        <span class="hero__title-line">Fest</span>
+      </h1>
+      <p class="hero__sub">El festival de escalada de las montañas colombianas</p>
+      <div class="hero__meta">
+        <div class="hero__meta-item"><span class="hero__meta-icon">📅</span><span>Septiembre 2027</span></div>
+        <div class="hero__meta-divider"></div>
+        <div class="hero__meta-item"><span class="hero__meta-icon">📍</span><span>Muros de Aguadulce</span></div>
+        <div class="hero__meta-divider"></div>
+        <div class="hero__meta-item"><span class="hero__meta-icon">🧗</span><span>6 Muros · 1 Boulder</span></div>
+      </div>
+      <a href="#tickets" class="btn btn--hero">
+        <span>Comprar Tickets</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+
+    <!-- COUNTDOWN -->
+    <div class="countdown" id="countdown">
+      <p class="countdown__label">Festival comienza en:</p>
+      <div class="countdown__units">
+        <div class="countdown__unit">
+          <span class="countdown__num" id="cd-days">---</span>
+          <span class="countdown__text">Días</span>
+        </div>
+        <div class="countdown__sep">:</div>
+        <div class="countdown__unit">
+          <span class="countdown__num" id="cd-hours">--</span>
+          <span class="countdown__text">Horas</span>
+        </div>
+        <div class="countdown__sep">:</div>
+        <div class="countdown__unit">
+          <span class="countdown__num" id="cd-mins">--</span>
+          <span class="countdown__text">Minutos</span>
+        </div>
+        <div class="countdown__sep">:</div>
+        <div class="countdown__unit">
+          <span class="countdown__num" id="cd-secs">--</span>
+          <span class="countdown__text">Segundos</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__scroll">
+      <span>Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="about__inner">
+        <div class="about__text">
+          <span class="section__tag reveal-item">— Nuestra historia</span>
+          <h2 class="section__title reveal-item" data-anim="slide-up">Sobre el<br/><em>Festival</em></h2>
+          <p class="about__p reveal-item" data-anim="fade" data-delay="100">
+            <strong>Choachí Vertical Fest</strong> nace en 2022 para celebrar la escalada en roca en las montañas de Cundinamarca, reuniendo a escaladores de toda Colombia para compartir rutas, técnica y comunidad alrededor del fuego.
+          </p>
+          <p class="about__p reveal-item" data-anim="fade" data-delay="200">
+            Lo que comenzó como un encuentro informal de diez amigos en los Muros de Aguadulce hoy convoca a más de 400 escaladores cada año. Un espacio sin egos donde el V0 y el 5.14 se encuentran en el mismo muro, donde la montaña enseña y la comunidad cuida.
+          </p>
+          <p class="about__p reveal-item" data-anim="fade" data-delay="300">
+            Cada edición apoya la conservación del sector y colabora con guías locales de Choachí para proteger el acceso a la roca para las generaciones que vienen.
+          </p>
+          <div class="about__numbers reveal-item" data-delay="400">
+            <div class="about__num"><span>5</span><small>Ediciones</small></div>
+            <div class="about__num"><span>400+</span><small>Escaladores</small></div>
+            <div class="about__num"><span>12</span><small>Países</small></div>
+            <div class="about__num"><span>100%</span><small>Pura roca</small></div>
+          </div>
+        </div>
+        <div class="about__visual reveal-item" data-anim="slide-left" data-delay="100">
+          <div class="about__img-stack">
+            <div class="about__img-card about__img-card--back">
+              <img src="Img03.jpg" alt="Escalada en Choachí" loading="lazy"/>
+            </div>
+            <div class="about__img-card about__img-card--front">
+              <img src="Img07.jpg" alt="Festival de escalada" loading="lazy"/>
+              <div class="about__img-badge">Est. 2022</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACTIVIDADES -->
+  <section class="section actividades" id="actividades">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag reveal-item">— Programación</span>
+        <h2 class="section__title reveal-item" data-anim="slide-up">Actividades<br/><em>del festival</em></h2>
+        <p class="section__desc reveal-item" data-delay="100">Cinco días de aventura vertical en el corazón de la cordillera oriental.</p>
+      </div>
+      <div class="cards-grid">
+        <div class="card reveal-item" data-anim="slide-up" data-delay="0">
+          <div class="card__icon-wrap card__icon-wrap--orange">
+            <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="12" r="5" stroke="currentColor" stroke-width="2.5"/><path d="M12 36 L20 22 L28 28 L36 16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M8 40 h32" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <div class="card__day">Día 1 – 2</div>
+          <h3 class="card__title">Competencia de Boulder</h3>
+          <p class="card__desc">Categorías abiertas en el parque de boulder. Más de 40 problemas con dificultades desde V0 a V10. Premios en efectivo y material técnico.</p>
+          <div class="card__tags"><span class="tag">Competencia</span><span class="tag">Aperitivo</span></div>
+        </div>
+        <div class="card card--featured reveal-item" data-anim="slide-up" data-delay="100">
+          <div class="card__badge">⭐ Destacado</div>
+          <div class="card__icon-wrap card__icon-wrap--green">
+            <svg viewBox="0 0 48 48" fill="none"><path d="M24 8 L24 40" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M16 16 L24 8 L32 16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 32 Q14 26 20 28 Q26 24 28 30 Q32 26 36 30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <div class="card__day">Día 2 – 4</div>
+          <h3 class="card__title">Escalada Deportiva</h3>
+          <p class="card__desc">Seis muros naturales en los sectores de Aguadulce. Rutas desde 5.9 hasta 5.14c. Guías locales y apertura de nuevas vías durante el evento.</p>
+          <div class="card__tags"><span class="tag">Sport</span><span class="tag">Trad</span><span class="tag">Multi-largo</span></div>
+        </div>
+        <div class="card reveal-item" data-anim="slide-up" data-delay="200">
+          <div class="card__icon-wrap card__icon-wrap--blue">
+            <svg viewBox="0 0 48 48" fill="none"><rect x="10" y="14" width="28" height="20" rx="3" stroke="currentColor" stroke-width="2.5"/><path d="M16 20 L32 20 M16 28 L26 28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M34 10 L34 14 M14 10 L14 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <div class="card__day">Día 1 – 5</div>
+          <h3 class="card__title">Talleres de Técnica</h3>
+          <p class="card__desc">Workshops con escaladores élite. Técnica de pies, movimiento en roca, lectura de vías y optimización de fuerza. Cupos limitados a 15 personas.</p>
+          <div class="card__tags"><span class="tag">Técnica</span><span class="tag">Coaching</span></div>
+        </div>
+        <div class="card reveal-item" data-anim="slide-up" data-delay="0">
+          <div class="card__icon-wrap card__icon-wrap--orange">
+            <svg viewBox="0 0 48 48" fill="none"><path d="M24 10 L24 16 M24 10 a10 10 0 1 1 0 20 a10 10 0 0 1 0-20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M16 36 L18 40 M32 36 L30 40 M20 38 L28 38" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <div class="card__day">Día 1 · 3</div>
+          <h3 class="card__title">Clínica de Seguridad</h3>
+          <p class="card__desc">Formación en sistemas de aseguramiento, gestión de riesgos y primeros auxilios en roca. Obligatorio para principiantes, recomendado para todos.</p>
+          <div class="card__tags"><span class="tag">Seguridad</span><span class="tag">Certificado</span></div>
+        </div>
+        <div class="card card--fire reveal-item" data-anim="slide-up" data-delay="100">
+          <div class="card__icon-wrap card__icon-wrap--warm">
+            <svg viewBox="0 0 48 48" fill="none"><path d="M24 38 C14 38 10 30 14 22 C16 26 20 24 20 20 C20 16 18 12 22 8 C22 14 28 16 26 22 C30 18 32 14 34 18 C38 26 34 38 24 38Z" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="card__day">Noches del 3 – 4</div>
+          <h3 class="card__title">Fogata & Música</h3>
+          <p class="card__desc">Veladas alrededor del fuego con músicos locales. Cocina de montaña, historias de escalada, proyección de cortos de alpinismo y ambiente de comunidad.</p>
+          <div class="card__tags"><span class="tag">Cultura</span><span class="tag">Comunidad</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERÍA -->
+  <section class="section galeria" id="galeria">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag reveal-item">— El lugar</span>
+        <h2 class="section__title reveal-item" data-anim="slide-up">Galería<br/><em>Aguadulce</em></h2>
+        <p class="section__desc reveal-item" data-delay="100">Así se ve la roca que te espera en Choachí.</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item gallery-item--tall reveal-item" data-anim="slide-up" data-delay="0">
+          <img src="Img01.jpg" alt="Sector Principal" loading="lazy"/>
+          <div class="gallery-item__overlay"><span>Sector Principal</span></div>
+        </div>
+        <div class="gallery-item reveal-item" data-anim="slide-up" data-delay="60">
+          <img src="Img02.jpg" alt="Muro Sur" loading="lazy"/>
+          <div class="gallery-item__overlay"><span>Muro Sur</span></div>
+        </div>
+        <div class="gallery-item reveal-item" data-anim="slide-up" data-delay="120">
+          <img src="Img03.jpg" alt="Boulder Park" loading="lazy"/>
+          <div class="gallery-item__overlay"><span></span></div>
+        </div>
+        <div class="gallery-item gallery-item--wide reveal-item" data-anim="slide-up" data-delay="60">
+          <img src="Img04.jpg" alt="Vista Panorámica" loading="lazy"/>
+          <div class="gallery-item__overlay"><span>Vista Panorámica</span></div>
+        </div>
+        <div class="gallery-item reveal-item" data-anim="slide-up" data-delay="0">
+          <img src="Img05.jpg" alt="Ruta Clásica" loading="lazy"/>
+          <div class="gallery-item__overlay"><span>Ruta Clásica</span></div>
+        </div>
+        <div class="gallery-item reveal-item" data-anim="slide-up" data-delay="60">
+          <img src="Img06.jpg" alt="Crux Move" loading="lazy"/>
+          <div class="gallery-item__overlay"><span>Boulder</span></div>
+        </div>
+        <div class="gallery-item reveal-item" data-anim="slide-up" data-delay="120">
+          <img src="Img07.jpg" alt="Comunidad" loading="lazy"/>
+          <div class="gallery-item__overlay"><span></span></div>
+        </div>
+        <div class="gallery-item gallery-item--tall reveal-item" data-anim="slide-up" data-delay="0">
+          <img src="Img08.jpg" alt="Techo Natural" loading="lazy"/>
+          <div class="gallery-item__overlay"><span>Comunidad</span></div>
+        </div>
+        <div class="gallery-item reveal-item" data-anim="slide-up" data-delay="60">
+          <img src="Img09.jpg" alt="Atardecer" loading="lazy"/>
+          <div class="gallery-item__overlay"><span>Fogata</span></div>
+        </div>
+        <div class="gallery-item reveal-item" data-anim="slide-up" data-delay="120">
+          <img src="Img10.jpg" alt="Fogata" loading="lazy"/>
+          <div class="gallery-item__overlay"><span>Boulder</span></div>
+        </div>
+        <div class="gallery-item reveal-item" data-anim="slide-up" data-delay="120">
+          <img src="Img11.jpg" alt="Fogata" loading="lazy"/>
+          <div class="gallery-item__overlay"><span></span></div>
+        </div>
+        <div class="gallery-item reveal-item" data-anim="slide-up" data-delay="120">
+          <img src="Img12.jpg" alt="Fogata" loading="lazy"/>
+          <div class="gallery-item__overlay"><span>Boulder</span></div>
+        </div>
+        <div class="gallery-item reveal-item" data-anim="slide-up" data-delay="120">
+          <img src="Img13.jpg" alt="Fogata" loading="lazy"/>
+          <div class="gallery-item__overlay"><span>Camping</span></div>
+        </div>
+        <div class="gallery-item reveal-item" data-anim="slide-up" data-delay="120">
+          <img src="Img14.jpg" alt="Fogata" loading="lazy"/>
+          <div class="gallery-item__overlay"><span>Montaña</span></div>
+        </div>
+      </div>
+    </div>
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+      <div class="lightbox__backdrop" id="lbBackdrop"></div>
+      <button class="lightbox__close" id="lbClose">✕</button>
+      <button class="lightbox__prev" id="lbPrev">‹</button>
+      <button class="lightbox__next" id="lbNext">›</button>
+      <div class="lightbox__inner">
+        <img class="lightbox__img" id="lbImg" src="" alt=""/>
+        <p class="lightbox__caption" id="lbCaption"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- UBICACIÓN -->
+  <section class="section ubicacion" id="ubicacion">
+    <div class="container">
+      <div class="ubicacion__inner">
+        <div class="ubicacion__info">
+          <span class="section__tag reveal-item">— Dónde nos encontramos</span>
+          <h2 class="section__title reveal-item" data-anim="slide-up">Choachí,<br/><em>Cundinamarca</em></h2>
+          <p class="ubicacion__desc reveal-item" data-delay="100">A tan solo 1 hora de Bogotá, Choachí guarda uno de los sectores de escalada más prometedores de Colombia. Entre su vegetación exuberante y el murmullo del río Blanco, los Muros de Aguadulce ofrecen roca de calidad excepcional.</p>
+          <div class="ubicacion__stats reveal-item" data-delay="150">
+            <div class="stat"><span class="stat__num">6</span><span class="stat__label">Muros de escalada</span></div>
+            <div class="stat"><span class="stat__num">1</span><span class="stat__label">Parque de boulder</span></div>
+            <div class="stat"><span class="stat__num">2550</span><span class="stat__label">m.s.n.m.</span></div>
+            <div class="stat"><span class="stat__num">18°</span><span class="stat__label">Temp. promedio</span></div>
+          </div>
+          <div class="ubicacion__access reveal-item" data-delay="200">
+            <div class="access-item"><span class="access-icon">🚐</span><span>Ruta Bogotá – Choachí: 1h 15min</span></div>
+            <div class="access-item"><span class="access-icon">🏕️</span><span>Camping disponible en el sector</span></div>
+            <div class="access-item"><span class="access-icon">🌧️</span><span>Temporada seca: agosto – octubre</span></div>
+          </div>
+        </div>
+        <div class="ubicacion__map reveal-item" data-anim="slide-left" data-delay="100">
+          <div class="map-card">
+            <div class="map-card__header">
+              <div class="map-card__pin">📍</div>
+              <div>
+                <strong>Muros de Aguadulce</strong>
+                <span>Choachí · Cundinamarca · 🇨🇴</span>
+              </div>
+            </div>
+            <div class="map-card__visual">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3977.1581194969453!2d-73.97751043190301!3d4.565583332695929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNMKwMzMnNTYuMSJOIDczwrA1OCcyMi40Ilc!5e0!3m2!1ses-419!2sco!4v1773430522993!5m2!1ses-419!2sco"
+                width="100%" height="100%" style="border:0;display:block;"
+                allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Mapa Choachí Vertical Fest">
+              </iframe>
+            </div>
+            <div class="map-card__footer">
+              <span>📍 4°33'56.1"N 73°58'22.4"W</span>
+              <a href="https://maps.google.com/maps?q=Choachí,Cundinamarca" target="_blank" class="btn btn--sm">Ver en Maps →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TICKETS -->
+  <section class="section tickets" id="tickets">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag reveal-item">— Entradas</span>
+        <h2 class="section__title reveal-item" data-anim="slide-up">Elige tu<br/><em>experiencia</em></h2>
+        <p class="section__desc reveal-item" data-delay="100">Tres niveles para vivir el Choachí Vertical Fest a tu manera.</p>
+      </div>
+      <div class="tickets-grid">
+        <div class="ticket-card reveal-item" data-anim="slide-up" data-delay="0">
+          <div class="ticket-card__top">
+            <div class="ticket-card__icon">🪨</div>
+            <h3 class="ticket-card__name">Boulder Pass</h3>
+            <div class="ticket-card__price"><span class="price__currency">COP</span><span class="price__amount">$40.000</span></div>
+          </div>
+          <ul class="ticket-card__features">
+            <li><span class="check">✓</span> Acceso al parque de boulder</li>
+            <li><span class="check">✓</span> Competencia de boulder</li>
+            <li><span class="check">✓</span> Clínica de seguridad</li>
+            <li><span class="check">✓</span> Fogata nocturna del día 3</li>
+            <li class="disabled"><span class="cross">✗</span> Acceso a muros deportivos</li>
+            <li class="disabled"><span class="cross">✗</span> Camping</li>
+            <li class="disabled"><span class="cross">✗</span> Talleres de técnica</li>
+          </ul>
+          <button class="btn btn--outline" onclick="openModal('Boulder Pass','$40.000')">Comprar ahora</button>
+        </div>
+        <div class="ticket-card ticket-card--featured reveal-item" data-anim="slide-up" data-delay="100">
+          <div class="ticket-card__ribbon">MÁS POPULAR</div>
+          <div class="ticket-card__top">
+            <div class="ticket-card__icon">🧗</div>
+            <h3 class="ticket-card__name">Climbing Pass</h3>
+            <div class="ticket-card__price"><span class="price__currency">COP</span><span class="price__amount">$60.000</span></div>
+          </div>
+          <ul class="ticket-card__features">
+            <li><span class="check">✓</span> Acceso al parque de boulder</li>
+            <li><span class="check">✓</span> Acceso a los 6 muros deportivos</li>
+            <li><span class="check">✓</span> Competencia de boulder</li>
+            <li><span class="check">✓</span> 1 Taller de técnica</li>
+            <li><span class="check">✓</span> Clínica de seguridad</li>
+            <li><span class="check">✓</span> Todas las fogatas nocturnas</li>
+            <li class="disabled"><span class="cross">✗</span> Camping</li>
+          </ul>
+          <button class="btn btn--primary" onclick="openModal('Climbing Pass','$60.000')">Comprar ahora</button>
+        </div>
+        <div class="ticket-card reveal-item" data-anim="slide-up" data-delay="200">
+          <div class="ticket-card__top">
+            <div class="ticket-card__icon">🏕️</div>
+            <h3 class="ticket-card__name">Full Festival + Camping</h3>
+            <div class="ticket-card__price"><span class="price__currency">COP</span><span class="price__amount">$100.000</span></div>
+          </div>
+          <ul class="ticket-card__features">
+            <li><span class="check gold">★</span> Todo lo del Climbing Pass</li>
+            <li><span class="check gold">★</span> Camping 5 noches incluido</li>
+            <li><span class="check gold">★</span> Todos los talleres de técnica</li>
+            <li><span class="check gold">★</span> Guía local asignado</li>
+            <li><span class="check gold">★</span> Kit festival exclusivo</li>
+            <li><span class="check gold">★</span> Prioridad en inscripción</li>
+            <li><span class="check gold">★</span> Desayuno en campo incluido</li>
+          </ul>
+<button class="btn btn--outline btn--gold" onclick="openModal('Full Festival + Camping','$100.000')">Comprar ahora</button>        </div>
+      </div>
+      <p class="tickets__note reveal-item" data-delay="300">* Precios válidos hasta el 31 de julio de 2027. Cupos limitados. Menores de 14 años con descuento del 50%.</p>
+    </div>
+  </section>
+
+  <!-- PATROCINADORES -->
+  <section class="section patrocinadores" id="patrocinadores">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag reveal-item">— Aliados</span>
+        <h2 class="section__title reveal-item" data-anim="slide-up">Patrocinadores<br/><em>del festival</em></h2>
+        <p class="section__desc reveal-item" data-delay="100">Marcas que apoyan la escalada y la vida al aire libre en Colombia.</p>
+      </div>
+      <div class="sponsors-tier reveal-item" data-delay="0">
+        <p class="sponsors-tier__label">🥇 Patrocinadores Oro</p>
+        <div class="sponsors-row">
+          <div class="sponsor-logo sponsor-logo--gold">
+            <span class="slogo-name">ROCAFORT</span>
+            <span class="slogo-sub">Gear &amp; Equipment</span>
+          </div>
+          <div class="sponsor-logo sponsor-logo--gold">
+            <span class="slogo-name">ANDINO CO</span>
+            <span class="slogo-sub">Outdoor Apparel</span>
+          </div>
+          <div class="sponsor-logo sponsor-logo--gold">
+            <span class="slogo-name">PETZL LATAM</span>
+            <span class="slogo-sub">Iluminación &amp; Seguridad</span>
+          </div>
+        </div>
+      </div>
+      <div class="sponsors-tier reveal-item" data-delay="100">
+        <p class="sponsors-tier__label">🥈 Patrocinadores Plata</p>
+        <div class="sponsors-row sponsors-row--silver">
+          <div class="sponsor-logo"><span class="slogo-name slogo-name--sm">CIMA NUTRITION</span></div>
+          <div class="sponsor-logo"><span class="slogo-name slogo-name--sm">VERTICAL LAB</span></div>
+          <div class="sponsor-logo"><span class="slogo-name slogo-name--sm">ROCA VERDE</span></div>
+          <div class="sponsor-logo"><span class="slogo-name slogo-name--sm">SIERRA TOURS</span></div>
+        </div>
+      </div>
+      <div class="sponsors-tier reveal-item" data-delay="200">
+        <p class="sponsors-tier__label">🤝 Colaboradores</p>
+        <div class="sponsors-row sponsors-row--bronze">
+          <div class="sponsor-logo sponsor-logo--text">Cundinamarca Turismo</div>
+          <div class="sponsor-logo sponsor-logo--text">Alcaldía Choachí</div>
+          <div class="sponsor-logo sponsor-logo--text">FEC Colombia</div>
+          <div class="sponsor-logo sponsor-logo--text">Refugio Aguadulce</div>
+          <div class="sponsor-logo sponsor-logo--text">Radio Montaña 96.1</div>
+        </div>
+      </div>
+      <p class="sponsors-cta reveal-item" data-delay="200">
+        ¿Tu marca quiere estar aquí? <a href="mailto:kevinleonardogm01@gmail.com?subject=Patrocinio CVF 2027">Contáctanos →</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__wave">
+      <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0,40 Q360,80 720,40 Q1080,0 1440,40 L1440,80 L0,80 Z" fill="var(--footer-bg)"/>
+      </svg>
+    </div>
+    <div class="footer__body">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__brand">
+            <div class="footer__logo">CVF</div>
+            <p>El festival de escalada<br/>de las montañas colombianas</p>
+            <p class="footer__date">Septiembre 2027 · Choachí, Colombia</p>
+          </div>
+          <div class="footer__links">
+            <h4>Navegación</h4>
+            <a href="#inicio">Inicio</a>
+            <a href="#about">Nosotros</a>
+            <a href="#actividades">Actividades</a>
+            <a href="#galeria">Galería</a>
+            <a href="#ubicacion">Ubicación</a>
+            <a href="#tickets">Tickets</a>
+          </div>
+          <div class="footer__contact">
+            <h4>Contacto</h4>
+            <a href="mailto:kevinleonardogm01@gmail.com" class="footer__email">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+              kevinleonardogm01@gmail.com
+            </a>
+            <div class="footer__socials">
+              <a href="#" class="social-icon" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+              <a href="#" class="social-icon" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+              <a href="#" class="social-icon" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96C1 8.12 1 12 1 12s0 3.88.46 5.58a2.78 2.78 0 0 0 1.95 1.95C5.12 20 12 20 12 20s6.88 0 8.59-.47a2.78 2.78 0 0 0 1.95-1.95C23 15.88 23 12 23 12s0-3.88-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"/></svg></a>
+              <a href="#" class="social-icon" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.3 6.3 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.53V6.78a4.85 4.85 0 0 1-1.01-.09z"/></svg></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p>© 2027 Choachí Vertical Fest. Sitio web de festival ficticio, <strong>Vibecoders League</strong>.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- MODAL FORMULARIO DE COMPRA -->
+<div class="modal-backdrop" id="modalBackdrop" onclick="closeModal()"></div>
+<div class="modal" id="buyModal">
+  <button class="modal__close" onclick="closeModal()">✕</button>
+  <div class="modal__header">
+    <span class="modal__icon">🧗</span>
+    <h3 class="modal__title">Comprar Entrada</h3>
+    <div class="modal__ticket-name" id="modalTicketName">—</div>
+    <div class="modal__ticket-price" id="modalTicketPrice">—</div>
+  </div>
+  <form class="modal__form" id="buyForm" onsubmit="handlePurchase(event)">
+    <div class="form-row">
+      <div class="form-group">
+        <label>Nombre completo *</label>
+        <input type="text" placeholder="Ej: María Rodríguez" required />
+      </div>
+      <div class="form-group">
+        <label>Correo electrónico *</label>
+        <input type="email" placeholder="tu@correo.com" required />
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Teléfono</label>
+        <input type="tel" placeholder="+57 300 000 0000" />
+      </div>
+      <div class="form-group">
+        <label>Ciudad de origen *</label>
+        <input type="text" placeholder="Bogotá, Medellín..." required />
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Número de entradas *</label>
+        <select required>
+          <option value="">Seleccionar</option>
+          <option value="1">1 entrada</option>
+          <option value="2">2 entradas</option>
+          <option value="3">3 entradas</option>
+          <option value="4">4 entradas</option>
+          <option value="5">5+ entradas</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Nivel de escalada *</label>
+        <select required>
+          <option value="">Seleccionar</option>
+          <option>Principiante (V0–V3 / 5.9–5.11)</option>
+          <option>Intermedio (V4–V6 / 5.11–5.12)</option>
+          <option>Avanzado (V7+ / 5.13+)</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group form-group--full">
+      <label>Número de tarjeta *</label>
+      <input type="text" placeholder="1234 5678 9012 3456" maxlength="19" id="cardNumber" required />
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Vencimiento *</label>
+        <input type="text" placeholder="MM/AA" maxlength="5" required />
+      </div>
+      <div class="form-group">
+        <label>CVV *</label>
+        <input type="text" placeholder="123" maxlength="3" required />
+      </div>
+    </div>
+    <div class="form-check">
+      <input type="checkbox" id="termsCheck" required />
+      <label for="termsCheck">Acepto los <a href="#">términos y condiciones</a> del festival</label>
+    </div>
+    <button type="submit" class="btn btn--primary modal__submit">
+      <span id="submitText">Confirmar compra</span>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+    </button>
+  </form>
+  <!-- Estado de éxito -->
+  <div class="modal__success" id="modalSuccess">
+    <div class="success__icon">🎉</div>
+    <h3>¡Compra confirmada!</h3>
+    <p>Tu entrada para <strong id="successTicket"></strong> está reservada.</p>
+    <p class="success__sub">Recibirás los detalles pronto. ¡Nos vemos en Choachí!</p>
+    <button class="btn btn--outline" onclick="closeModal()" style="width:auto;margin-top:8px;">Cerrar</button>
+  </div>
+</div>
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>
