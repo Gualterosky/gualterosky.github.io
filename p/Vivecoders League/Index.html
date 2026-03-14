@@ -1,0 +1,192 @@
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap');
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Syne', sans-serif; background: #080c10; color: #e8f0f8; min-height: 100vh; }
+  .bg-grid {
+    position: fixed; inset: 0;
+    background-image: linear-gradient(rgba(0,230,160,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(0,230,160,0.04) 1px, transparent 1px);
+    background-size: 40px 40px; pointer-events: none; z-index: 0;
+  }
+  .wrapper { position: relative; z-index: 1; max-width: 1100px; margin: 0 auto; padding: 0 24px 80px; }
+  header { padding: 64px 0 48px; text-align: center; }
+  .badge {
+    display: inline-block; font-family: 'Space Mono', monospace; font-size: 11px;
+    letter-spacing: 0.15em; color: #00e6a0; border: 1px solid rgba(0,230,160,0.4);
+    padding: 5px 14px; border-radius: 100px; margin-bottom: 20px; text-transform: uppercase;
+  }
+  h1 { font-size: clamp(2rem, 5vw, 3.8rem); font-weight: 800; line-height: 1.05; letter-spacing: -0.03em; margin-bottom: 10px; color: #fff; }
+  h1 span { color: #00e6a0; }
+  .author { font-family: 'Space Mono', monospace; font-size: 0.85rem; color: #4a6070; letter-spacing: 0.08em; margin-bottom: 16px; }
+  .author em { color: #00a8ff; font-style: normal; }
+  .subtitle { font-size: 1rem; color: #7a94a8; font-weight: 400; max-width: 480px; margin: 0 auto 40px; line-height: 1.7; }
+  .stats-bar { display: flex; justify-content: center; gap: 40px; margin-bottom: 64px; flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat-num { font-family: 'Space Mono', monospace; font-size: 2rem; font-weight: 700; color: #00e6a0; display: block; line-height: 1; }
+  .stat-label { font-size: 0.75rem; color: #4a6070; text-transform: uppercase; letter-spacing: 0.1em; margin-top: 4px; display: block; }
+  .divider { width: 1px; height: 40px; background: rgba(255,255,255,0.08); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
+  .card {
+    background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 16px; padding: 24px; text-decoration: none; color: inherit;
+    display: flex; flex-direction: column; gap: 12px;
+    transition: border-color 0.2s, background 0.2s, transform 0.15s;
+    position: relative; overflow: hidden;
+  }
+  .card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, #00e6a0, #00a8ff); opacity: 0; transition: opacity 0.2s;
+  }
+  .card:hover { border-color: rgba(0,230,160,0.3); background: rgba(0,230,160,0.04); transform: translateY(-2px); }
+  .card:hover::before { opacity: 1; }
+  .card-header { display: flex; align-items: center; justify-content: space-between; }
+  .card-num {
+    font-family: 'Space Mono', monospace; font-size: 11px; color: #00e6a0;
+    background: rgba(0,230,160,0.1); border: 1px solid rgba(0,230,160,0.2);
+    padding: 3px 10px; border-radius: 100px; letter-spacing: 0.05em;
+  }
+  .arrow-icon {
+    width: 28px; height: 28px; border: 1px solid rgba(255,255,255,0.1); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; color: #7a94a8; font-size: 14px;
+    transition: border-color 0.2s, color 0.2s, background 0.2s;
+  }
+  .card:hover .arrow-icon { border-color: #00e6a0; color: #00e6a0; background: rgba(0,230,160,0.1); }
+  .card-title { font-size: 1.05rem; font-weight: 600; color: #d8eaf8; line-height: 1.3; }
+  .card-desc { font-size: 0.82rem; color: #4a6070; line-height: 1.6; flex: 1; }
+  .card-tag {
+    display: inline-flex; align-items: center; gap: 5px; font-family: 'Space Mono', monospace;
+    font-size: 10px; color: #00a8ff; background: rgba(0,168,255,0.08);
+    border: 1px solid rgba(0,168,255,0.15); padding: 3px 8px; border-radius: 6px;
+    margin-top: 4px; letter-spacing: 0.03em;
+  }
+  footer { text-align: center; margin-top: 72px; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.06); }
+  footer p { font-family: 'Space Mono', monospace; font-size: 12px; color: #2e4050; letter-spacing: 0.05em; }
+  footer span { color: #00e6a0; }
+</style>
+
+<div class="bg-grid"></div>
+
+<div class="wrapper">
+  <header>
+    <div class="badge">Platzi · Vivecoders League 2025</div>
+    <h1>Proyectos de<br><span>Kevin Gualteros</span></h1>
+    <p class="author">13 retos · <em>Vivecoders League</em></p>
+    <p class="subtitle">Colección completa de proyectos de programación del reto Vivecoders League de Platzi.</p>
+  </header>
+
+  <div class="stats-bar">
+    <div class="stat">
+      <span class="stat-num">13</span>
+      <span class="stat-label">Proyectos</span>
+    </div>
+    <div class="divider"></div>
+    <div class="stat">
+      <span class="stat-num">16%</span>
+      <span class="stat-label">Completados</span>
+    </div>
+    <div class="divider"></div>
+    <div class="stat">
+      <span class="stat-num">∞</span>
+      <span class="stat-label">Aprendizaje</span>
+    </div>
+  </div>
+
+  <div class="grid">
+
+    <a href="https://gualterosky.github.io/p/Vivecoders%20League/Reto%201/Choach%C3%AD%20Vertical%20Fest/index.html" target="_blank" rel="noopener" class="card">
+      <div class="card-header"><span class="card-num">RETO 01</span><div class="arrow-icon">↗</div></div>
+      <div class="card-title">Reto 1 - Landing page para un festival ficticio</div>
+      <div class="card-desc">Choachi vertical fest, festival de escalada y coneccion con la naturalesa.</div>
+      <span class="card-tag">HTML · CSS · JavaScript</span>
+    </a>
+
+    <a href="https://v0-dashboard-de-desarrollador.vercel.app/" target="_blank" rel="noopener" class="card">
+      <div class="card-header"><span class="card-num">RETO 02</span><div class="arrow-icon">↗</div></div>
+      <div class="card-title">Reto 2 - Dashboard personal</div>
+      <div class="card-desc">DevTracker es un dashboard web diseñado para visualizar el progreso de aprendizaje de un desarrollador como si fuera el sistema de estadísticas de un videojuego.</div>
+      <span class="card-tag">TypeScript · React · Tailwind CSS</span>
+    </a>
+
+    <a href="https://gualterosky.github.io/p/Vivecoders%20League/Reto%203/" target="_blank" rel="noopener" class="card">
+      <div class="card-header"><span class="card-num">RETO 03</span><div class="arrow-icon">↗</div></div>
+      <div class="card-title">Reto 3</div>
+      <div class="card-desc">Tercer desafío de programación del reto Vivecoders League.</div>
+      <span class="card-tag">Aun no realizado</span>
+    </a>
+
+    <a href="https://gualterosky.github.io/p/Vivecoders%20League/Reto%204/" target="_blank" rel="noopener" class="card">
+      <div class="card-header"><span class="card-num">RETO 04</span><div class="arrow-icon">↗</div></div>
+      <div class="card-title">Reto 4</div>
+      <div class="card-desc">Cuarto desafío de programación del reto Vivecoders League.</div>
+      <span class="card-tag">Aun no realizado</span>
+    </a>
+
+    <a href="https://gualterosky.github.io/p/Vivecoders%20League/Reto%205/" target="_blank" rel="noopener" class="card">
+      <div class="card-header"><span class="card-num">RETO 05</span><div class="arrow-icon">↗</div></div>
+      <div class="card-title">Reto 5</div>
+      <div class="card-desc">Quinto desafío de programación del reto Vivecoders League.</div>
+      <span class="card-tag">Aun no realizado</span>
+    </a>
+
+    <a href="https://gualterosky.github.io/p/Vivecoders%20League/Reto%206/" target="_blank" rel="noopener" class="card">
+      <div class="card-header"><span class="card-num">RETO 06</span><div class="arrow-icon">↗</div></div>
+      <div class="card-title">Reto 6</div>
+      <div class="card-desc">Sexto desafío de programación del reto Vivecoders League.</div>
+      <span class="card-tag">Aun no realizado</span>
+    </a>
+
+    <a href="https://gualterosky.github.io/p/Vivecoders%20League/Reto%207/" target="_blank" rel="noopener" class="card">
+      <div class="card-header"><span class="card-num">RETO 07</span><div class="arrow-icon">↗</div></div>
+      <div class="card-title">Reto 7</div>
+      <div class="card-desc">Séptimo desafío de programación del reto Vivecoders League.</div>
+      <span class="card-tag">Aun no realizado</span>
+    </a>
+
+    <a href="https://gualterosky.github.io/p/Vivecoders%20League/Reto%208/" target="_blank" rel="noopener" class="card">
+      <div class="card-header"><span class="card-num">RETO 08</span><div class="arrow-icon">↗</div></div>
+      <div class="card-title">Reto 8</div>
+      <div class="card-desc">Octavo desafío de programación del reto Vivecoders League.</div>
+      <span class="card-tag">Aun no realizado</span>
+    </a>
+
+    <a href="https://gualterosky.github.io/p/Vivecoders%20League/Reto%209/" target="_blank" rel="noopener" class="card">
+      <div class="card-header"><span class="card-num">RETO 09</span><div class="arrow-icon">↗</div></div>
+      <div class="card-title">Reto 9</div>
+      <div class="card-desc">Noveno desafío de programación del reto Vivecoders League.</div>
+      <span class="card-tag">Aun no realizado</span>
+    </a>
+
+    <a href="https://gualterosky.github.io/p/Vivecoders%20League/Reto%2010/" target="_blank" rel="noopener" class="card">
+      <div class="card-header"><span class="card-num">RETO 10</span><div class="arrow-icon">↗</div></div>
+      <div class="card-title">Reto 10</div>
+      <div class="card-desc">Décimo desafío de programación del reto Vivecoders League.</div>
+      <span class="card-tag">Aun no realizado</span>
+    </a>
+
+    <a href="https://gualterosky.github.io/p/Vivecoders%20League/Reto%2011/" target="_blank" rel="noopener" class="card">
+      <div class="card-header"><span class="card-num">RETO 11</span><div class="arrow-icon">↗</div></div>
+      <div class="card-title">Reto 11</div>
+      <div class="card-desc">Undécimo desafío de programación del reto Vivecoders League.</div>
+      <span class="card-tag">Aun no realizado</span>
+    </a>
+
+    <a href="https://gualterosky.github.io/p/Vivecoders%20League/Reto%2012/" target="_blank" rel="noopener" class="card">
+      <div class="card-header"><span class="card-num">RETO 12</span><div class="arrow-icon">↗</div></div>
+      <div class="card-title">Reto 12</div>
+      <div class="card-desc">Duodécimo desafío de programación del reto Vivecoders League.</div>
+      <span class="card-tag">Aun no realizado</span>
+    </a>
+
+    <a href="https://gualterosky.github.io/p/Vivecoders%20League/Reto%2013/" target="_blank" rel="noopener" class="card">
+      <div class="card-header"><span class="card-num">RETO 13</span><div class="arrow-icon">↗</div></div>
+      <div class="card-title">Reto 13</div>
+      <div class="card-desc">Decimotercer y último desafío del reto Vivecoders League.</div>
+      <span class="card-tag">Aun no realizado</span>
+    </a>
+
+  </div>
+
+  <footer>
+    <p>Hecho con código y café · <span>Kevin Gualteros</span> · Vivecoders League</p>
+  </footer>
+</div>
